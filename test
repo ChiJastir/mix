@@ -1,0 +1,454 @@
+{
+  "videos": {
+    "trailers": [
+      {
+        "url": "https://www.youtube.com/watch?v=Sro80JOeFNw&feature=emb_logo",
+        "name": "Трейлер (сезон 2)",
+        "site": "youtube"
+      },
+      {
+        "url": "https://www.youtube.com/v/Vx-cdrHiGd0",
+        "name": "Трейлер (сезон 1)",
+        "site": "youtube"
+      },
+      {
+        "url": "https://www.youtube.com/v/okBHQWnYImg",
+        "name": "Трейлер №2 (сезон 1)",
+        "site": "youtube"
+      },
+      {
+        "url": "https://www.youtube.com/embed/dDSCziT9jlM",
+        "name": "Miss Kobayashi's Dragon Maid - Available 4/24",
+        "site": "youtube",
+        "type": "TRAILER"
+      }
+    ],
+    "teasers": []
+  },
+  "id": 1009278,
+  "type": "anime",
+  "externalId": {
+    "kpHD": null,
+    "imdb": "tt6185782",
+    "tmdb": 69291
+  },
+  "name": "Кобаяси и её горничная-дракон",
+  "rating": {
+    "kp": 7.503,
+    "imdb": 7.8,
+    "filmCritics": 0,
+    "russianFilmCritics": 0,
+    "await": 0
+  },
+  "description": "Обычная офисная работница Кобаяси жила одна, пока однажды не спасла дракониху Тору. Тору смотрит на людей как на низших и неразумных существ, но в знак благодарности решает жить со своей спасительницей и делать всё возможное, чтобы вернуть долг.",
+  "votes": {
+    "kp": 5762,
+    "imdb": 4645,
+    "filmCritics": 0,
+    "russianFilmCritics": 0,
+    "await": 0
+  },
+  "distributors": {
+    "distributor": null,
+    "distributorRelease": null
+  },
+  "premiere": {
+    "country": "Германия",
+    "world": "2017-01-11T00:00:00.000Z"
+  },
+  "slogan": null,
+  "year": 2017,
+  "poster": {
+    "url": "https://st.kp.yandex.net/images/film_big/1009278.jpg",
+    "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_1009278.jpg"
+  },
+  "facts": null,
+  "genres": [
+    {
+      "name": "аниме"
+    },
+    {
+      "name": "мультфильм"
+    },
+    {
+      "name": "комедия"
+    },
+    {
+      "name": "фэнтези"
+    }
+  ],
+  "countries": [
+    {
+      "name": "Япония"
+    }
+  ],
+  "seasonsInfo": [
+    {
+      "number": 0,
+      "episodesCount": 1
+    },
+    {
+      "number": 1,
+      "episodesCount": 14
+    },
+    {
+      "number": 2,
+      "episodesCount": 13
+    }
+  ],
+  "persons": [
+    {
+      "id": 1709951,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1709951.jpg",
+      "name": "Муцуми Тамура",
+      "enName": "Mutsumi Tamura",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 4001758,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4001758.jpg",
+      "name": "Юки Кувахара",
+      "enName": "Yuuki Kuwahara",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 4478933,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4478933.jpg",
+      "name": "Мария Наганава",
+      "enName": "Maria Naganawa",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 1294955,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1294955.jpg",
+      "name": "Даисукэ Оно",
+      "enName": "Daisuke Ono",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 4180835,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4180835.jpg",
+      "name": "Минами Такахаси",
+      "enName": "Minami Takahashi",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 1537548,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1537548.jpg",
+      "name": "Юити Накамура",
+      "enName": "Yuuichi Nakamura",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 1235653,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1235653.jpg",
+      "name": "Эмири Като",
+      "enName": "Emiri Kato",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 2109366,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2109366.jpg",
+      "name": "Каори Исихара",
+      "enName": "Kaori Ishihara",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 4559167,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4559167.jpg",
+      "name": "Юки Такада",
+      "enName": "Yuki Takada",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 1820352,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1820352.jpg",
+      "name": "Синъя Такахаси",
+      "enName": "Shinya Takahashi",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 1352118,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1352118.jpg",
+      "name": "Хикару Нанасэ",
+      "enName": "Hikaru Nanase",
+      "profession": "композиторы",
+      "enProfession": "composer"
+    },
+    {
+      "id": 6708118,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6708118.jpg",
+      "name": "Кэндзи Кондо",
+      "enName": "Kenji Kondou",
+      "profession": "композиторы",
+      "enProfession": "composer"
+    },
+    {
+      "id": 2869282,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2869282.jpg",
+      "name": "Которинго",
+      "enName": "Kotringo",
+      "profession": "композиторы",
+      "enProfession": "composer"
+    },
+    {
+      "id": 4470087,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4470087.jpg",
+      "name": "Микико Ватанабэ",
+      "enName": "Mikiko Watanabe",
+      "profession": "художники",
+      "enProfession": "designer"
+    },
+    {
+      "id": 6889283,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6889283.jpg",
+      "name": "Сёко Отиаи",
+      "enName": "Shoko Ochiai",
+      "profession": "художники",
+      "enProfession": "designer"
+    },
+    {
+      "id": 1049251,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1049251.jpg",
+      "name": "Ясухиро Такэмото",
+      "enName": "Yasuhiro Takemoto",
+      "profession": "режиссеры",
+      "enProfession": "director"
+    },
+    {
+      "id": 1332611,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1332611.jpg",
+      "name": "Тацуя Исихара",
+      "enName": "Tatsuya Ishihara",
+      "profession": "режиссеры",
+      "enProfession": "director"
+    },
+    {
+      "id": 1332644,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1332644.jpg",
+      "name": "Нориюки Китанохара",
+      "enName": "Noriyuki Kitanohara",
+      "profession": "режиссеры",
+      "enProfession": "director"
+    },
+    {
+      "id": 3206003,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_3206003.jpg",
+      "name": "Таити Огава",
+      "enName": "Taichi Ogawa",
+      "profession": "режиссеры",
+      "enProfession": "director"
+    },
+    {
+      "id": 1995844,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1995844.jpg",
+      "name": "Кэнго Сигэмура",
+      "enName": "Kengo Shigemura",
+      "profession": "монтажеры",
+      "enProfession": "editor"
+    },
+    {
+      "id": 4559168,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4559168.jpg",
+      "name": "Акихиро Юра",
+      "enName": "Akihiro Ura",
+      "profession": "операторы",
+      "enProfession": "operator"
+    },
+    {
+      "id": 6889282,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6889282.jpg",
+      "name": "Хироки Уэда",
+      "enName": "Hiroki Ueda",
+      "profession": "операторы",
+      "enProfession": "operator"
+    },
+    {
+      "id": 1925869,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1925869.jpg",
+      "name": "Хидэаки Хатта",
+      "enName": "Hideaki Hatta",
+      "profession": "продюсеры",
+      "enProfession": "producer"
+    },
+    {
+      "id": 1332650,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1332650.jpg",
+      "name": "Ёко Хатта",
+      "enName": "Yoko Hatta",
+      "profession": "продюсеры",
+      "enProfession": "producer"
+    },
+    {
+      "id": 1825877,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1825877.jpg",
+      "name": "Синъити Накамура",
+      "enName": "Shinichi Nakamura",
+      "profession": "продюсеры",
+      "enProfession": "producer"
+    },
+    {
+      "id": 3372032,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_3372032.jpg",
+      "name": "Масаюки Нисидэ",
+      "enName": "Masayuki Nishide",
+      "profession": "продюсеры",
+      "enProfession": "producer"
+    },
+    {
+      "id": 1127400,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1127400.jpg",
+      "name": "Юка Ямада",
+      "enName": "Yuka Yamada",
+      "profession": "редакторы",
+      "enProfession": "writer"
+    },
+    {
+      "id": 4775703,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4775703.jpg",
+      "name": "Масаси Нисикава",
+      "enName": "Masashi Nishikawa",
+      "profession": "редакторы",
+      "enProfession": "writer"
+    },
+    {
+      "id": 1101505,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1101505.jpg",
+      "name": "Фумихико Симо",
+      "enName": "Fumihiko Shimo",
+      "profession": "редакторы",
+      "enProfession": "writer"
+    },
+    {
+      "id": 1049251,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1049251.jpg",
+      "name": "Ясухиро Такэмото",
+      "enName": "Yasuhiro Takemoto",
+      "profession": "редакторы",
+      "enProfession": "writer"
+    }
+  ],
+  "images": {
+    "postersCount": 25,
+    "backdropsCount": 11,
+    "framesCount": 18
+  },
+  "lists": [],
+  "spokenLanguages": [
+    {
+      "name": "日本語",
+      "nameEn": "Japanese"
+    }
+  ],
+  "productionCompanies": [
+    {
+      "name": "Kyoto Animation",
+      "url": "https://www.themoviedb.org/t/p/original/nrvweD25GIYmfTIaFyIncLy4p3G.png",
+      "previewUrl": "https://www.themoviedb.org/t/p/w500/nrvweD25GIYmfTIaFyIncLy4p3G.png"
+    },
+    {
+      "name": "Pony Canyon",
+      "url": "https://www.themoviedb.org/t/p/original/rtW3NadfF4kR5mTW00ahiFxw6k7.png",
+      "previewUrl": "https://www.themoviedb.org/t/p/w500/rtW3NadfF4kR5mTW00ahiFxw6k7.png"
+    },
+    {
+      "name": "Heart Company",
+      "url": "https://www.themoviedb.org/t/p/original/z5E1jpLIrwDckeWcMqcPZ9qHvTw.png",
+      "previewUrl": "https://www.themoviedb.org/t/p/w500/z5E1jpLIrwDckeWcMqcPZ9qHvTw.png"
+    },
+    {
+      "name": "ABC Animation",
+      "url": "https://www.themoviedb.org/t/p/original/4gMnTQACykjt0KSRV1N8vSKpkVt.png",
+      "previewUrl": "https://www.themoviedb.org/t/p/w500/4gMnTQACykjt0KSRV1N8vSKpkVt.png"
+    },
+    {
+      "name": "Lantis",
+      "url": "https://www.themoviedb.org/t/p/original/reCkuk3GEomdx5gQpsm15Zl1sgX.png",
+      "previewUrl": "https://www.themoviedb.org/t/p/w500/reCkuk3GEomdx5gQpsm15Zl1sgX.png"
+    },
+    {
+      "name": "Dragon Life Improvement Committee",
+      "url": null,
+      "previewUrl": null
+    }
+  ],
+  "typeNumber": 4,
+  "alternativeName": "Kobayashi-san Chi No Maid Dragon",
+  "backdrop": {
+    "url": null,
+    "previewUrl": null
+  },
+  "budget": {},
+  "enName": null,
+  "movieLength": null,
+  "names": [
+    {
+      "name": "Кобаяси и её горничная-дракон"
+    },
+    {
+      "name": "Kobayashi-san Chi No Maid Dragon"
+    }
+  ],
+  "networks": [
+    {
+      "name": "Tokyo MX",
+      "url": "https://www.themoviedb.org/t/p/original/3qFArHw6nrFIdkH2tPht701sNhs.png",
+      "previewUrl": "https://www.themoviedb.org/t/p/w500/3qFArHw6nrFIdkH2tPht701sNhs.png"
+    }
+  ],
+  "status": "completed",
+  "subType": "Сценарированный",
+  "updateDates": [],
+  "ratingMpaa": null,
+  "shortDescription": null,
+  "technology": {
+    "hasImax": false,
+    "has3D": false
+  },
+  "ticketsOnSale": false,
+  "updatedAt": "2023-03-26T07:14:35.622Z",
+  "similarMovies": [],
+  "fees": {
+    "world": {},
+    "russia": {},
+    "usa": {}
+  },
+  "sequelsAndPrequels": [
+    {
+      "id": 5066574,
+      "name": "Кобаяси и её горничная-дракон. Юбилейные серии",
+      "enName": null,
+      "alternativeName": "Mini Dragon",
+      "type": "anime",
+      "poster": {
+        "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/be72d1e3-ec56-40f6-b4c3-3f627041e077/orig",
+        "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/be72d1e3-ec56-40f6-b4c3-3f627041e077/x1000"
+      }
+    }
+  ],
+  "ageRating": null,
+  "logo": {
+    "url": null
+  },
+  "watchability": {
+    "items": null
+  },
+  "releaseYears": [
+    {
+      "start": 2017,
+      "end": 2021
+    }
+  ],
+  "top10": null,
+  "top250": null
+}

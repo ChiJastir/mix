@@ -1,0 +1,57 @@
+.card{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(22, 0, 82, 0.4) 0 0 10px 0;
+    margin: 25px 0;
+}
+
+.cardBody{
+    padding: 0 10px;
+}
+
+.poster{
+    height: 350px;
+    border-radius: 10px 0 0 10px;
+}
+
+.stars{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.star{
+    height: 21px;
+    width: 21px;
+}
+
+.rating{
+    margin: 0;
+    font-size: 18px;
+}
+
+.heading{
+    margin: 0;
+    color: #8841ff;
+    font-size: 22px;
+}
+
+.description{
+    margin: 5px 0 10px 0;
+    text-overflow: ellipsis
+}
+
+.genre{
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.buttons{
+    display: flex;
+}
+
+.buttons a + a{
+    margin-left: 10px;
+}
