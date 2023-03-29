@@ -11,3 +11,9 @@
 .input{
     width: calc(100% - 16px);
 }
+
+.btn_cont{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

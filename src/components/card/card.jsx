@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './card.module.css'
 import ButtonLink from "../../UI/buttonLink/buttonLink";
 import star from '../../img/star.svg'
-import {stringLengthLimit} from "../../utils/utils";
 
 const Card = ({data}) => {
 
@@ -15,7 +14,7 @@ const Card = ({data}) => {
                     <p className={classes.rating}>{Number((data.rating.kp).toFixed(1)) + '/10'}</p>
                 </div>
                 <h3 className={classes.heading}>{data.name}</h3>
-                <p className={classes.description}>{stringLengthLimit(data.description, 500)}</p>
+                <p className={classes.description}>{data.shortDescription}</p>
                 <p className={classes.genre}>
                     Жанры:
                     {data.genres.map(ganre =>

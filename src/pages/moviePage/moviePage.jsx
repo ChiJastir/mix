@@ -12,32 +12,37 @@ const MoviePage = () => {
     const [page, setPage] = useState(1)
 
     const [contentType, setContentType] = useState('movie')
+    const [search, setSearch] = useState('')
 
     const lastElem = useRef()
     const observer = useRef()
 
     async function loadMovies(){
-        const zxc = await getAllFilms.get(contentType, page)
+        const zxc = await getAllFilms.get(contentType, page, search)
         setMovies([...movies, ...zxc.data.docs])
     }
 
-    async function loadMoviesSinglePage(search){
-        const zxc = await getAllFilms.get(contentType, page, search)
+    async function loadMoviesSinglePage(){
+        const zxc = await getAllFilms.get(contentType, 1, search)
         setMovies(zxc.data.docs)
     }
 
     const [fetching, isLoading] = useFetching(loadMovies)
 
     useEffect(() => {
+        setMovies([])
+        setPage(1)
+        console.log(contentType)
         loadMoviesSinglePage()
     }, [contentType])
 
     useEffect(() => {
         if (isLoading) return
         if (observer.current) observer.current.disconnect()
-        var callback = function(entries, observer) {
+        var callback = async function(entries, observer) {
             if (entries[0].isIntersecting){
-                setPage(page+1)
+                console.log(page)
+                await setPage(page+1)
             }
         };
         observer.current = new IntersectionObserver(callback);
@@ -52,14 +57,18 @@ const MoviePage = () => {
         <div>
             <PageTemplate
                 setContentType={setContentType}
+                setSearch={setSearch}
+                search={search}
                 loadMoviesSinglePage={loadMoviesSinglePage}
             >
                 <Heading>Католог фильмов</Heading>
                 {movies.map(item => <Card key={item.id} data={item}/>)}
+                {/*{movies.length%10 !== 0 &&*/}
+                    <div ref={lastElem}></div>
+                {/*}*/}
                 {isLoading &&
                     <div className={classes.loader}><Loader/></div>
                 }
-                <div ref={lastElem}></div>
             </PageTemplate>
         </div>
     );
