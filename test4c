@@ -1,0 +1,858 @@
+{
+  "docs": [
+    {
+      "id": 738950,
+      "type": "cartoon",
+      "externalId": {
+        "kpHD": "4225003db7ee10ea93061b62fe60ef4b",
+        "imdb": "tt3746824",
+        "tmdb": 394759
+      },
+      "name": "Волки и овцы: бе-е-е-зумное превращение",
+      "rating": {
+        "kp": 6.749,
+        "imdb": 5.8,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 79.78
+      },
+      "description": "Любимцу стаи, молодому и беззаботному волку Серому невдомек, что скоро он окажется чужим среди своих друзей. Претендуя на роль вожака стаи и на руку (вернее, лапу) и сердце самой красивой волчицы Бьянки, Серый продолжает дурачиться и устраивать розыгрыши над сородичами. Все переворачивается с ног на голову, когда он решает изменить себя с помощью волшебного зелья. Чудо действительно происходит: Серый превращается в барана! Опасаясь за свою, теперь овечью, шкуру, Серый сбегает от волков и поселяется в деревне овец.\n\nТеперь Серому предстоит не только вернуть доверие возлюбленной и стаи, но и свой прежний облик. Но как это сделать, если у тебя есть всего три дня, да еще рога и копыта?",
+      "votes": {
+        "kp": 25534,
+        "imdb": 3283,
+        "filmCritics": 0,
+        "russianFilmCritics": 2,
+        "await": 2469
+      },
+      "year": 2016,
+      "poster": {
+        "url": "https://st.kp.yandex.net/images/film_big/738950.jpg",
+        "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_738950.jpg"
+      },
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "семейный"
+        },
+        {
+          "name": "комедия"
+        },
+        {
+          "name": "приключения"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Россия"
+        }
+      ],
+      "alternativeName": null,
+      "enName": null,
+      "movieLength": 80,
+      "names": [
+        {
+          "name": "Волки и овцы: бе-е-е-зумное превращение"
+        }
+      ],
+      "shortDescription": "Превратившийся в барана волк ищет способ снова стать собой. Анимационная комедия с обаятельными героями",
+      "logo": {
+        "url": "https://avatars.mds.yandex.net/get-ott/1531675/2a000001722843cf3378fee222f0b762c381/orig"
+      },
+      "watchability": {
+        "items": [
+          {
+            "name": "Okko",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/7713e586-17d1-42d1-ac62-53e9ef1e70c3/orig"
+            },
+            "url": "https://okko.tv/movie/volki-i-ovcy-be-e-e-zumnoe-prevrashchenie?utm_medium=referral&utm_source=yandex_search&utm_campaign=new_search_feed"
+          },
+          {
+            "name": "Иви",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/2419418/0dfd1724-848f-4725-9160-abc571f41c11/orig"
+            },
+            "url": "https://www.ivi.ru/watch/133279?utm_source=yandex&utm_medium=wizard"
+          },
+          {
+            "name": "KION",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/daeb142e-3ecc-4bb2-9bff-4827996643ab/orig"
+            },
+            "url": "https://kion.ru/video/movie/282885908?utm_source=yandex&utm_medium=organic&utm_campaign=wizard"
+          },
+          {
+            "name": "PREMIER",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/0f86e907-9531-47e9-87bd-5101a08d4e30/orig"
+            },
+            "url": "https://premier.one/show/9780?utm_source=yandex&utm_medium=yandex_feed_search&utm_campaign=yandex_feed"
+          },
+          {
+            "name": "more.tv",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/1648503/97e3cbbd-40ee-4298-888d-ed2d0f022a69/orig"
+            },
+            "url": "https://more.tv/volki_i_ovtsy_be-e-e-zumnoe_prevraschenie_?utm_source=yandex-snippet&utm_medium=snippet&utm_campaign=volki_i_ovtsy_be-e-e-zumnoe_prevraschenie_"
+          },
+          {
+            "name": "Wink",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/1672343/54096cbe-cc3b-41c9-8e44-990ebbca8d61/orig"
+            },
+            "url": "https://wink.ru/media_items/87682832?utm_source=yandex&utm_medium=koldunschick&utm_content=name"
+          },
+          {
+            "name": "viju",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/224348/8b10c84b-e1bb-4493-9bc4-6ee56554403a/orig"
+            },
+            "url": "https://viju.ru/filmy/volki-i-ovtsy-be-e-e-zumnoe-prevraschenie?utm_campaign=yandex_content_integration&utm_medium=affiliate&utm_source=yandex"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1345939,
+      "type": "cartoon",
+      "externalId": {
+        "kpHD": "4a9301a6ea1aedd489f696714a07ad50",
+        "imdb": null
+      },
+      "name": "Сказки Серого Волка",
+      "rating": {
+        "kp": 8.266,
+        "imdb": 7.9,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "description": "Как Белоснежка победит злую мачеху? Каким образом Джеку удастся избежать встречи с ужасным Великаном и найти сокровища? За кого на самом деле выйдет замуж Золушка? И как всех обхитрит Красная Шапочка? Думаете, что все знаете? Серый Волк расскажет свою собственную историю.",
+      "votes": {
+        "kp": 20640,
+        "imdb": 498,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "year": 2016,
+      "poster": {
+        "url": "https://st.kp.yandex.net/images/film_big/1345939.jpg",
+        "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_1345939.jpg"
+      },
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "фэнтези"
+        },
+        {
+          "name": "драма"
+        },
+        {
+          "name": "комедия"
+        },
+        {
+          "name": "семейный"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Великобритания"
+        }
+      ],
+      "alternativeName": "Revolting Rhymes",
+      "enName": null,
+      "movieLength": 60,
+      "names": [
+        {
+          "name": "Сказки Серого Волка"
+        },
+        {
+          "name": "Revolting Rhymes"
+        }
+      ],
+      "shortDescription": "Необычные истории про Красную шапочку, Золушку и Белоснежку. Волк рассказывает хулиганскую версию Роальда Даля",
+      "logo": {
+        "url": "https://avatars.mds.yandex.net/get-ott/2385704/2a00000174dfeb4de89b6f1e223fc7260756/orig"
+      },
+      "watchability": {
+        "items": [
+          {
+            "name": "Okko",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/7713e586-17d1-42d1-ac62-53e9ef1e70c3/orig"
+            },
+            "url": "https://okko.tv/movie/revolting-rhymes?utm_medium=referral&utm_source=yandex_search&utm_campaign=new_search_feed"
+          },
+          {
+            "name": "KION",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/daeb142e-3ecc-4bb2-9bff-4827996643ab/orig"
+            },
+            "url": "https://kion.ru/video/movie/244568196?utm_source=yandex&utm_medium=organic&utm_campaign=wizard"
+          },
+          {
+            "name": "PREMIER",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/0f86e907-9531-47e9-87bd-5101a08d4e30/orig"
+            },
+            "url": "https://premier.one/show/14972?utm_source=yandex&utm_medium=yandex_feed_search&utm_campaign=yandex_feed"
+          },
+          {
+            "name": "Wink",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/1672343/54096cbe-cc3b-41c9-8e44-990ebbca8d61/orig"
+            },
+            "url": "https://wink.ru/media_items/116272878?utm_source=yandex&utm_medium=koldunschick&utm_content=name"
+          }
+        ]
+      }
+    },
+    {
+      "id": 984361,
+      "type": "cartoon",
+      "externalId": {
+        "kpHD": "442562aec24a28b1b50c84157a2fdcbd",
+        "imdb": null
+      },
+      "name": "Волки и Овцы: Ход свиньёй",
+      "rating": {
+        "kp": 6.536,
+        "imdb": 5.1,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 72.65
+      },
+      "description": "В спокойной и размеренной жизни объединенного городка волков и овец появляются неожиданные гости – песец и маленькая овечка. Никто не ожидал, что они принесут с собой смертельную опасность, преодолеть которую можно лишь всем вместе. Ведь только сообща решаются большие проблемы и серьезные задачи – в единстве сила!",
+      "votes": {
+        "kp": 18643,
+        "imdb": 753,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 528
+      },
+      "year": 2018,
+      "poster": {
+        "url": "https://st.kp.yandex.net/images/film_big/984361.jpg",
+        "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_984361.jpg"
+      },
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "семейный"
+        },
+        {
+          "name": "комедия"
+        },
+        {
+          "name": "приключения"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Россия"
+        }
+      ],
+      "alternativeName": null,
+      "enName": null,
+      "movieLength": 72,
+      "names": [
+        {
+          "name": "Волки и Овцы: Ход свиньёй"
+        }
+      ],
+      "shortDescription": "Дружба хищников и травоядных — под угрозой! Яркий мультфильм с голосами Максима Матвеева и Елизаветы Боярской",
+      "logo": {
+        "url": "https://avatars.mds.yandex.net/get-ott/2385704/2a00000172132b59b9b93c22248d8f2ce7ae/orig"
+      },
+      "watchability": {
+        "items": [
+          {
+            "name": "Okko",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/7713e586-17d1-42d1-ac62-53e9ef1e70c3/orig"
+            },
+            "url": "https://okko.tv/movie/volki-i-ovcy-khod-svinjojj?utm_medium=referral&utm_source=yandex_search&utm_campaign=new_search_feed"
+          },
+          {
+            "name": "Иви",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/2419418/0dfd1724-848f-4725-9160-abc571f41c11/orig"
+            },
+            "url": "https://www.ivi.ru/watch/172252?utm_source=yandex&utm_medium=wizard"
+          },
+          {
+            "name": "KION",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/daeb142e-3ecc-4bb2-9bff-4827996643ab/orig"
+            },
+            "url": "https://kion.ru/video/movie/282816608?utm_source=yandex&utm_medium=organic&utm_campaign=wizard"
+          },
+          {
+            "name": "PREMIER",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/0f86e907-9531-47e9-87bd-5101a08d4e30/orig"
+            },
+            "url": "https://premier.one/show/9754?utm_source=yandex&utm_medium=yandex_feed_search&utm_campaign=yandex_feed"
+          },
+          {
+            "name": "more.tv",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/1648503/97e3cbbd-40ee-4298-888d-ed2d0f022a69/orig"
+            },
+            "url": "https://more.tv/volki_i_ovtsy_hod_svinei?utm_source=yandex-snippet&utm_medium=snippet&utm_campaign=volki_i_ovtsy_hod_svinei"
+          },
+          {
+            "name": "Триколор Кино и ТВ",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/947e777c-2f73-4cbc-b09d-6bfa3966ba13/orig"
+            },
+            "url": "https://kino.tricolor.tv/watch/volki-i-ovtsy-khod-sviney-2018/?utm_source=yandex&utm_medium=feed"
+          },
+          {
+            "name": "Wink",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/1672343/54096cbe-cc3b-41c9-8e44-990ebbca8d61/orig"
+            },
+            "url": "https://wink.ru/media_items/76285626?utm_source=yandex&utm_medium=koldunschick&utm_content=name"
+          }
+        ]
+      }
+    },
+    {
+      "id": 260061,
+      "type": "cartoon",
+      "externalId": {
+        "kpHD": "43be43511807e3b3a01c38f6916f4be8",
+        "imdb": "tt3444630"
+      },
+      "name": "Лиса и Волк",
+      "rating": {
+        "kp": 7.813,
+        "imdb": 7.1,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "description": "По мотивам русских народных сказок о хитрой Лисе и глупом Волке.",
+      "votes": {
+        "kp": 14627,
+        "imdb": 96,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "year": 1958,
+      "poster": {
+        "url": "https://st.kp.yandex.net/images/film_big/260061.jpg",
+        "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_260061.jpg"
+      },
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "детский"
+        },
+        {
+          "name": "короткометражка"
+        }
+      ],
+      "countries": [
+        {
+          "name": "СССР"
+        }
+      ],
+      "alternativeName": null,
+      "enName": null,
+      "names": [
+        {
+          "name": "Лиса и Волк"
+        }
+      ],
+      "movieLength": 10,
+      "shortDescription": "Хитрая лиса и рыбки наелась, и волка обманула. Красивый рисованный мультфильм по русской народной сказке",
+      "logo": {
+        "url": null
+      },
+      "watchability": {
+        "items": [
+          {
+            "name": "PREMIER",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/0f86e907-9531-47e9-87bd-5101a08d4e30/orig"
+            },
+            "url": "https://premier.one/show/11552?utm_source=yandex&utm_medium=yandex_feed_search&utm_campaign=yandex_feed"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1204003,
+      "type": "cartoon",
+      "externalId": {
+        "kpHD": null,
+        "imdb": "tt8774798",
+        "tmdb": 520946
+      },
+      "name": "100% волк",
+      "rating": {
+        "kp": 5.808,
+        "imdb": 5.6,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "description": "Наследник семьи оборотней Фредди Люпин отчаянно желает стать как предки. Но на 13-й день рождения его ждёт шок, ведь он оборачивается не волком, а… пуделем.",
+      "votes": {
+        "kp": 12888,
+        "imdb": 2029,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 71
+      },
+      "year": 2020,
+      "poster": {
+        "url": "https://st.kp.yandex.net/images/film_big/1204003.jpg",
+        "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_1204003.jpg"
+      },
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "фэнтези"
+        },
+        {
+          "name": "комедия"
+        },
+        {
+          "name": "приключения"
+        },
+        {
+          "name": "семейный"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Австралия"
+        },
+        {
+          "name": "Бельгия"
+        }
+      ],
+      "alternativeName": "100% Wolf",
+      "enName": null,
+      "movieLength": 96,
+      "names": [
+        {
+          "name": "100% волк"
+        },
+        {
+          "name": "100% Wolf"
+        }
+      ],
+      "shortDescription": null,
+      "logo": {
+        "url": null
+      },
+      "watchability": {
+        "items": [
+          {
+            "name": "KION",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/daeb142e-3ecc-4bb2-9bff-4827996643ab/orig"
+            },
+            "url": "https://kion.ru/video/movie/337301317?utm_source=yandex&utm_medium=organic&utm_campaign=wizard"
+          }
+        ]
+      }
+    },
+    {
+      "id": 79681,
+      "externalId": {
+        "kpHD": null
+      },
+      "name": "Балто 2: В поисках волка",
+      "alternativeName": "Balto: Wolf Quest",
+      "enName": null,
+      "names": [
+        {
+          "name": "Балто 2: В поисках волка"
+        },
+        {
+          "name": "Balto: Wolf Quest"
+        }
+      ],
+      "type": "cartoon",
+      "year": 2001,
+      "description": "Продолжение приключений легендарного пса Балто. Случилось так, что Балто стал отцом. Он сделал все возможное, чтобы пристроить всех своих отпрысков в хорошие семьи. Но одна девочка, по имени Алу, вдруг почувствовала, что никогда не сможет быть похожей на своих братьев и сестер. После того, как она встретила в лесу охотника, Алу ощутила пробуждение загадочной природы волка внутри себя. Кто же она - волк или собака? Чтобы найти ответ на этот вопрос, Алу отправляется в путешествие по бескрайним просторам Аляски, в котором ее будет сопровождать любящий отец Балто.",
+      "shortDescription": null,
+      "rating": {
+        "kp": 7.236,
+        "imdb": 6,
+        "filmCritics": 5.6,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 12318,
+        "imdb": 5090,
+        "filmCritics": 218,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 76,
+      "poster": {
+        "url": "https://st.kp.yandex.net/images/film_big/79681.jpg",
+        "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_79681.jpg"
+      },
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "фэнтези"
+        },
+        {
+          "name": "приключения"
+        },
+        {
+          "name": "семейный"
+        }
+      ],
+      "countries": [
+        {
+          "name": "США"
+        }
+      ],
+      "watchability": {
+        "items": null
+      },
+      "releaseYears": []
+    },
+    {
+      "id": 43698,
+      "type": "cartoon",
+      "externalId": {
+        "kpHD": "4f0601a42d4c596c98edf89979d9d8da",
+        "imdb": "tt0210974",
+        "tmdb": 72208
+      },
+      "name": "Серый волк энд Красная шапочка",
+      "rating": {
+        "kp": 7.975,
+        "imdb": 7.4,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "description": "Соскучившись по Бабушке Терезе, мать отправляет Красную Шапочку из Москвы в Париж доставить ей русский праздничный пирог. Проходя через лес, Красная Шапочка встречает особо опасного преступника — Серого Волка, который к тому времени уже съел доктора Айболита и Зайчика. Он расспрашивает её, куда она идёт и с чем её пирог.",
+      "votes": {
+        "kp": 11826,
+        "imdb": 512,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "year": 1990,
+      "poster": {
+        "url": "https://st.kp.yandex.net/images/film_big/43698.jpg",
+        "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_43698.jpg"
+      },
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "короткометражка"
+        },
+        {
+          "name": "мюзикл"
+        }
+      ],
+      "countries": [
+        {
+          "name": "СССР"
+        }
+      ],
+      "alternativeName": null,
+      "enName": null,
+      "names": [
+        {
+          "name": "Серый волк энд Красная шапочка"
+        },
+        {
+          "name": "Серый волк & Красная шапочка",
+          "language": "RU",
+          "type": null
+        },
+        {
+          "name": "Seryy Volk end Krasnaya Shapochka",
+          "language": "RU",
+          "type": null
+        },
+        {
+          "name": "Le loup gris et le petit chaperon rouge",
+          "language": "FR",
+          "type": null
+        },
+        {
+          "name": "A szürke farkas és Piroska",
+          "language": "HU",
+          "type": null
+        },
+        {
+          "name": "Сивият вълк и Червената шапчица",
+          "language": "BG",
+          "type": null
+        },
+        {
+          "name": "Grey Wolf and Little Red Riding Hood",
+          "language": "GB",
+          "type": null
+        }
+      ],
+      "movieLength": 27,
+      "shortDescription": "Волк преследует девочку, которая идет в Париж к любимой бабушке. Кукольно-пластилиновый мюзикл Гарри Бардина",
+      "logo": {
+        "url": "https://avatars.mds.yandex.net/get-ott/224348/2a0000017b0d92e253fb11106f5acc066138/orig"
+      },
+      "watchability": {
+        "items": [
+          {
+            "name": "Okko",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/7713e586-17d1-42d1-ac62-53e9ef1e70c3/orig"
+            },
+            "url": "https://okko.tv/movie/seryjj-volk-krasnaja-shapochka?utm_medium=referral&utm_source=yandex_search&utm_campaign=new_search_feed"
+          },
+          {
+            "name": "PREMIER",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/0f86e907-9531-47e9-87bd-5101a08d4e30/orig"
+            },
+            "url": "https://premier.one/show/11812?utm_source=yandex&utm_medium=yandex_feed_search&utm_campaign=yandex_feed"
+          }
+        ]
+      }
+    },
+    {
+      "id": 460310,
+      "type": "cartoon",
+      "externalId": {
+        "kpHD": null,
+        "imdb": "tt2393769",
+        "tmdb": 138785
+      },
+      "name": "Дед Мороз и серый волк",
+      "rating": {
+        "kp": 7.057,
+        "imdb": 7.1,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "description": "Дед Мороз помогает зайчатам избавиться от преследований злого волка и принести из леса чудесную новогоднюю ёлку.",
+      "votes": {
+        "kp": 5531,
+        "imdb": 39,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "year": 1937,
+      "poster": null,
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "короткометражка"
+        }
+      ],
+      "countries": [
+        {
+          "name": "СССР"
+        }
+      ],
+      "alternativeName": null,
+      "enName": null,
+      "names": [
+        {
+          "name": "Дед Мороз и серый волк"
+        }
+      ],
+      "movieLength": 11,
+      "shortDescription": null,
+      "logo": {
+        "url": null
+      },
+      "watchability": {
+        "items": null
+      }
+    },
+    {
+      "id": 45826,
+      "alternativeName": null,
+      "countries": [
+        {
+          "name": "СССР"
+        }
+      ],
+      "description": "Как любовь к музыке сделала друзьями волка и козлят.",
+      "enName": null,
+      "externalId": {
+        "kpHD": "4dbc6d841f1bc02e87e03894780d0a15",
+        "imdb": "tt0211111",
+        "tmdb": 160076
+      },
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "короткометражка"
+        },
+        {
+          "name": "мюзикл"
+        },
+        {
+          "name": "семейный"
+        }
+      ],
+      "movieLength": 10,
+      "name": "Волк и семеро козлят на новый лад",
+      "names": [
+        {
+          "name": "Волк и семеро козлят на новый лад"
+        },
+        {
+          "name": "Volk i semero kozlyat na novyy lad",
+          "language": "RU",
+          "type": "translit"
+        }
+      ],
+      "poster": {
+        "url": "https://st.kp.yandex.net/images/film_big/45826.jpg",
+        "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_45826.jpg"
+      },
+      "rating": {
+        "kp": 7.325,
+        "imdb": 7.3,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "shortDescription": "Волк стучится в дом козлят, но те вооружены безупречным слухом. Кукольный мюзикл по сценарию Юрия Энтина",
+      "type": "cartoon",
+      "votes": {
+        "kp": 3799,
+        "imdb": 92,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "year": 1975,
+      "logo": {
+        "url": null
+      },
+      "watchability": {
+        "items": null
+      }
+    },
+    {
+      "externalId": {
+        "kpHD": "43043c2371f16faba0bfded6731850ba",
+        "imdb": "tt6053002",
+        "tmdb": 416126
+      },
+      "rating": {
+        "kp": 7.657,
+        "imdb": 6.9,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 1662,
+        "imdb": 48,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 10,
+      "id": 259912,
+      "type": "cartoon",
+      "name": "Олень и волк",
+      "description": "Волка придавило упавшее дерево. Благородный Олень помог ему выбраться. Но Волк не сдержал данного слова и вместо благодарности напал на Оленя. Мудрый Медведь рассудил спорщиков...",
+      "year": 1950,
+      "poster": {
+        "url": "https://st.kp.yandex.net/images/film_big/259912.jpg",
+        "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_259912.jpg"
+      },
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "детский"
+        },
+        {
+          "name": "короткометражка"
+        }
+      ],
+      "countries": [
+        {
+          "name": "СССР"
+        }
+      ],
+      "alternativeName": null,
+      "enName": null,
+      "names": [
+        {
+          "name": "Олень и волк"
+        }
+      ],
+      "shortDescription": "Спасенный из ловушки хищник обманывает своего освободителя. Классический мультфильм по эстонской сказке",
+      "logo": {
+        "url": "https://avatars.mds.yandex.net/get-ott/1531675/2a0000017d9d9c1c153517300879801bf87e/orig"
+      },
+      "watchability": {
+        "items": [
+          {
+            "name": "Okko",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/7713e586-17d1-42d1-ac62-53e9ef1e70c3/orig"
+            },
+            "url": "https://okko.tv/movie/olen-i-volk?utm_medium=referral&utm_source=yandex_search&utm_campaign=new_search_feed"
+          },
+          {
+            "name": "PREMIER",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/0f86e907-9531-47e9-87bd-5101a08d4e30/orig"
+            },
+            "url": "https://premier.one/show/11214?utm_source=yandex&utm_medium=yandex_feed_search&utm_campaign=yandex_feed"
+          },
+          {
+            "name": "Триколор Кино и ТВ",
+            "logo": {
+              "url": "https://avatars.mds.yandex.net/get-ott/239697/947e777c-2f73-4cbc-b09d-6bfa3966ba13/orig"
+            },
+            "url": "https://kino.tricolor.tv/watch/olen-i-volk-1950/?utm_source=yandex&utm_medium=feed"
+          }
+        ]
+      }
+    }
+  ],
+  "total": 71,
+  "limit": 10,
+  "page": 2,
+  "pages": 8
+}
