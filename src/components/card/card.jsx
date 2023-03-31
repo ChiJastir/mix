@@ -2,12 +2,15 @@ import React from 'react';
 import classes from './card.module.css'
 import ButtonLink from "../../UI/buttonLink/buttonLink";
 import star from '../../img/star.svg'
+import undefinedPost from '../../img/null-poster.png'
 
 const Card = ({data}) => {
-
     return (
         <div className={classes.card}>
-            <img className={classes.poster} src={data.poster.url} alt="poster"/>
+            {data.poster
+                ? <img className={classes.poster} src={data.poster.url} alt="poster"/>
+                : <img className={classes.poster} src={undefinedPost} alt="poster"/>
+            }
             <div className={classes.cardBody}>
                 <div className={classes.stars}>
                     <img className={classes.star} src={star} alt="star"/>
@@ -24,7 +27,9 @@ const Card = ({data}) => {
                 <p>Год выпуска: {data.year}</p>
                 <div className={classes.buttons}>
                     <ButtonLink href={"https://www.kinopoisk.ru/film/" + data.id}>На кинопоиск</ButtonLink>
-                    {/*<ButtonLink href={data.videos.trailers[0].url}>Трейлер</ButtonLink>*/}
+                    {/*{data.videos.trailers[0].url &&*/}
+                    {/*    <ButtonLink href={data.videos.trailers[0].url}>Трейлер</ButtonLink>*/}
+                    {/*// }*/}
                 </div>
             </div>
         </div>

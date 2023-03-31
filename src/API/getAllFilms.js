@@ -12,7 +12,7 @@ export default class getAllFilms{
         const response = await axios.get('/v1/movie', {
             headers: {
                 "accept": "application/json",
-                "X-API-KEY": "S9SE1F5-0YRM6ZE-NYR1BQS-46DD1SP"
+                "X-API-KEY": "PPGDBVZ-4SY4Q6B-MVRZ8DN-FGDCK4Q"
             },
             params: {
                 type: contentType,

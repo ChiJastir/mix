@@ -11,6 +11,7 @@ const Search = ({className, setSearch}) => {
         <aside className={[classes.container, className].join(' ')}>
             <Heading>Поиск</Heading>
             <Input value={localSearch} onChange={event => setLocalSearch(event.target.value)} className={classes.input} placeholder={"Поиск"}/>
+            <hr/>
             <div className={classes.btn_cont}>
                 <Button
                     onClick={() => setSearch(localSearch)}
