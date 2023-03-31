@@ -12,13 +12,16 @@ const MoviePage = () => {
     const [page, setPage] = useState(1)
 
     const [contentType, setContentType] = useState('movie')
+    const [year, setYear] = useState('1860-2030')
     const [search, setSearch] = useState('')
+    const [filter, setFilter] = useState('')
+    const [genre, setGenre] = useState('')
 
     const lastElem = useRef()
     const observer = useRef()
 
     async function loadMovies(localPage = 1){
-        const zxc = await getAllFilms.get(contentType, localPage, search)
+        const zxc = await getAllFilms.get(contentType, localPage, search, filter, year, genre)
         if (localPage === 1){
             setMovies(zxc.data.docs)
         } else {
@@ -44,24 +47,25 @@ const MoviePage = () => {
     useEffect( () => {
         setPage(1)
         fetching()
-    }, [contentType, search])
+    }, [contentType, search, filter, year, genre])
 
     return (
-        <div>
-            <PageTemplate
-                setContentType={setContentType}
-                setSearch={setSearch}
-            >
-                <Heading>Католог фильмов</Heading>
-                {movies.map(item => <Card key={item.id} data={item}/>)}
-                {movies.length >= 0 &&
-                    <div ref={lastElem}></div>
-                }
-                {isLoading &&
-                    <div className={classes.loader}><Loader/></div>
-                }
-            </PageTemplate>
-        </div>
+        <PageTemplate
+            setContentType={setContentType}
+            setSearch={setSearch}
+            setFilter={setFilter}
+            setYear={setYear}
+            setGenre={setGenre}
+        >
+            <Heading>Каталог</Heading>
+            {movies.map(item => <Card key={item.id} data={item}/>)}
+            {movies.length >= 0 &&
+                <div ref={lastElem}></div>
+            }
+            {isLoading &&
+                <div className={classes.loader}><Loader/></div>
+            }
+        </PageTemplate>
     )
 }
 
