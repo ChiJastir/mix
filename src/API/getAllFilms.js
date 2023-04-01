@@ -29,14 +29,27 @@ export default class getAllFilms{
         if (genre)
             params.append('genres.name', genre)
 
-        console.log('response!')
+        console.log('resp!')
 
         const response = await axios.get('/v1/movie', {
             headers: {
                 "accept": "application/json",
-                "X-API-KEY": "NYMR7T7-NC04P3Z-KK0SX7R-6WVF0SX"
+                "X-API-KEY": "PPGDBVZ-4SY4Q6B-MVRZ8DN-FGDCK4Q"
             },
             params: params
+        })
+        return response
+    }
+
+    static async getById(id){
+        const response = await axios.get('/v1/movie', {
+            headers: {
+                "accept": "application/json",
+                "X-API-KEY": "PPGDBVZ-4SY4Q6B-MVRZ8DN-FGDCK4Q"
+            },
+            params: {
+                id: id,
+            }
         })
         return response
     }

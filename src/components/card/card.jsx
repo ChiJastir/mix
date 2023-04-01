@@ -1,10 +1,13 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom'
 import classes from './card.module.css'
-import ButtonLink from "../../UI/buttonLink/buttonLink";
+// import Button from "../../UI/button/button";
 import star from '../../img/star.svg'
 import undefinedPost from '../../img/null-poster.png'
+import Button from "../../UI/button/button";
 
 const Card = ({data}) => {
+    const router = useNavigate()
     return (
         <div className={classes.card}>
             {data.poster
@@ -26,10 +29,8 @@ const Card = ({data}) => {
                 </p>
                 <p>Год выпуска: {data.year}</p>
                 <div className={classes.buttons}>
-                    <ButtonLink href={"https://www.kinopoisk.ru/film/" + data.id}>На кинопоиск</ButtonLink>
-                    {/*{data.videos.trailers[0].url &&*/}
-                    {/*    <ButtonLink href={data.videos.trailers[0].url}>Трейлер</ButtonLink>*/}
-                    {/*// }*/}
+                    <Button onClick={() => router(`/movie/${data.id}`)}>Подробнее</Button>
+                    {/*<Button href={"https://www.kinopoisk.ru/film/" + data.id}>На кинопоиск</Button>*/}
                 </div>
             </div>
         </div>

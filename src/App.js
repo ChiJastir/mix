@@ -1,29 +1,23 @@
 import './App.css';
-import axios from "axios";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import MainPage from "./pages/mainPage";
+import MainPage from "./pages/mainPage/mainPage";
 import MoviePage from "./pages/moviePage/moviePage";
+import classes from "./pages/moviePage/movie.module.css";
+import Header from "./components/header/header";
+import React from "react";
+import SingleMoviePage from "./pages/singleMoviePage/singleMoviePage";
 
 function App() {
-  async function Get(){
-    const response = await axios.get('/v1/movie/random', {
-      headers:{
-        "X-API-KEY": "PPGDBVZ-4SY4Q6B-MVRZ8DN-FGDCK4Q"
-      }
-    })
-    console.log(response)
-  }
-
-  // useEffect(() => Get, [])
-
   return (
     <BrowserRouter>
-      <div className={"container"}>
-        <Routes>
-          <Route path="/" element={<MoviePage/>} />
-          <Route path="/main" element={<MainPage/>} />
-        </Routes>
-      </div>
+        <div className={"container"}>
+            <Header className={classes.header}/>
+            <Routes>
+                <Route path="/" element={<MainPage/>} />
+                <Route path="/catalog" element={<MoviePage/>} />
+                <Route path="/movie/:id" element={<SingleMoviePage/>} />
+            </Routes>
+        </div>
     </BrowserRouter>
   );
 }

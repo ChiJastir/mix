@@ -1,10 +1,9 @@
 import React from 'react';
-import Header from "../components/pageTemplate/header/header";
+import classes from './main.module.css'
 
 const MainPage = () => {
     return (
         <div>
-            <Header/>
 
         </div>
     );

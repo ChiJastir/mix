@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import classes from './search.module.css'
-import Heading from "../../../UI/heading/heading";
-import Button from "../../../UI/button/button";
-import Input from "../../../UI/input/input";
-import Select from "../../../UI/select/select";
+import Heading from "../../UI/heading/heading";
+import Button from "../../UI/button/button";
+import Input from "../../UI/input/input";
+import Select from "../../UI/select/select";
 
-const Search = ({className, setSearch, setFilter, setContentType, setYear, setGenre}) => {
+const Search = ({className, setSearch, setFilter, setContentType, setYear, setGenre, setPage}) => {
     const [localSearch, setLocalSearch] = useState('')
     const [localFilter, setLocalFilter] = useState('votes.kp')
     const [localContentType, setLocalContentType] = useState('movie')
@@ -13,6 +13,7 @@ const Search = ({className, setSearch, setFilter, setContentType, setYear, setGe
     const [localGenre, setLocalGenre] = useState('')
 
     function clickBtn() {
+        setPage(1)
         setGenre(localGenre)
         setYear(localYear)
         setContentType(localContentType)
