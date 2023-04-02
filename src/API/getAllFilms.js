@@ -34,7 +34,7 @@ export default class getAllFilms{
         const response = await axios.get('/v1/movie', {
             headers: {
                 "accept": "application/json",
-                "X-API-KEY": "PPGDBVZ-4SY4Q6B-MVRZ8DN-FGDCK4Q"
+                "X-API-KEY": "RXAY6A6-91X4EZ9-NM2Z1JC-ENZGZKC"
             },
             params: params
         })
@@ -42,14 +42,11 @@ export default class getAllFilms{
     }
 
     static async getById(id){
-        const response = await axios.get('/v1/movie', {
+        const response = await axios.get(`/v1/movie/${id}`, {
             headers: {
                 "accept": "application/json",
-                "X-API-KEY": "PPGDBVZ-4SY4Q6B-MVRZ8DN-FGDCK4Q"
+                "X-API-KEY": "RXAY6A6-91X4EZ9-NM2Z1JC-ENZGZKC"
             },
-            params: {
-                id: id,
-            }
         })
         return response
     }

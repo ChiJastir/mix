@@ -1,7 +1,6 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom'
 import classes from './card.module.css'
-// import Button from "../../UI/button/button";
 import star from '../../img/star.svg'
 import undefinedPost from '../../img/null-poster.png'
 import Button from "../../UI/button/button";
