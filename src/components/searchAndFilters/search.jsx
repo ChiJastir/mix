@@ -5,7 +5,7 @@ import Button from "../../UI/button/button";
 import Input from "../../UI/input/input";
 import Select from "../../UI/select/select";
 
-const Search = ({className, setSearch, setFilter, setContentType, setYear, setGenre, setPage}) => {
+const Search = ({className, setMovies, setSearch, setFilter, setContentType, setYear, setGenre, setPage}) => {
     const [localSearch, setLocalSearch] = useState('')
     const [localFilter, setLocalFilter] = useState('votes.kp')
     const [localContentType, setLocalContentType] = useState('movie')
@@ -19,6 +19,7 @@ const Search = ({className, setSearch, setFilter, setContentType, setYear, setGe
         setContentType(localContentType)
         setFilter(localFilter)
         setSearch(localSearch)
+        // setMovies([])
     }
 
     return (

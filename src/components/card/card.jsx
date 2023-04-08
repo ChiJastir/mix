@@ -2,7 +2,7 @@ import React from 'react';
 import {useNavigate} from 'react-router-dom'
 import classes from './card.module.css'
 import star from '../../img/star.svg'
-import undefinedPost from '../../img/null-poster.png'
+import undefinedPoster from '../../img/null-poster.png'
 import Button from "../../UI/button/button";
 
 const Card = ({data}) => {
@@ -11,7 +11,7 @@ const Card = ({data}) => {
         <div className={classes.card}>
             {data.poster
                 ? <img className={classes.poster} src={data.poster.url} alt="poster"/>
-                : <img className={classes.poster} src={undefinedPost} alt="poster"/>
+                : <img className={classes.poster} src={undefinedPoster} alt="poster"/>
             }
             <div className={classes.cardBody}>
                 <div className={classes.stars}>

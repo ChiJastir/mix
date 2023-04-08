@@ -28,4 +28,5 @@
 
 .list_item:hover{
     color: #8841ff;
+    cursor: pointer;
 }

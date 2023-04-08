@@ -1,47 +1,7 @@
-.content{
-    background-color: #f6f6f6;
-    border-radius: 10px 10px 0 0;
-    box-shadow: rgba(22, 0, 82, 0.4) 0 0 10px;
-    padding: 40px;
-    min-height: calc(100vh - 109px - 65px);
-    height: 100%;
-    margin-top: 15px;
-}
-
-.loader{
-    display: flex;
-    justify-content: center;
-}
-
-.container{
-    display: flex;
-}
-
-.info{
-    width: 100%;
-    margin-left: 15px;
-}
-
-.poster{
-    border-radius: 10px;
-    width: 350px;
-}
-
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.name{
-    margin: 0;
-    color: #8841ff;
-    font-size: 40px;
-}
-
-.altName{
-    color: #6c6c6c;
-    margin: 0;
 }
 
 .rating{
@@ -57,48 +17,6 @@
 .votes{
     margin: 0;
     color: #6c6c6c;
-}
-
-.detailedInfo ul{
-    list-style: none;
-    margin: 0;
-    margin-top: 20px;
-    padding: 0;
-}
-
-.detailedInfo ul li{
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-.detailedInfo ul li span{
-    font-weight: 600;
-}
-
-.buttons{
-    display: flex;
-}
-
-.buttons div{
-    display: flex;
-    flex-direction: column;
-}
-
-.buttons a,
-.buttons button{
-    margin: 5px 0;
-}
-
-.col{
-    margin-left: 10px;
-}
-
-.description h3{
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-size: 24px;
-    color: #8841ff;
-    text-align: center;
 }
 
 .description p{

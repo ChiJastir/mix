@@ -1,34 +1,36 @@
 import React, {useEffect, useState} from 'react';
-import classes from './singleMoviePage.module.css'
+import classes from '../singlePage.module.css'
+import localClasses from  './singleMoviePage.module.css'
 import {useParams} from "react-router-dom";
 import {useFetching} from "../../hooks/useFething";
-import getAllFilms from "../../API/getAllFilms";
+import gets from "../../API/gets";
 import Loader from "../../UI/loader/loader";
-import undefinedPost from "../../img/null-poster.png";
+import undefinedPoster from "../../img/null-poster.png";
 import {movieLengthInHour, joinObject, addingSpacesInMoney} from "../../utils/utils";
 import ButtonLink from "../../UI/buttonLink/buttonLink";
 import Button from "../../UI/button/button";
+import ModalWindow from "../../UI/modalWindow/modalWindow";
+import Persons from "../../components/persons/persons";
+import Facts from "../../components/facts/facts";
 
 // актеры, композиторы, художники, режиссеры, монтажеры, операторы, продюсеры, актеры дубляжа, редакторы
 
 const SingleMoviePage = () => {
     const params = useParams()
     const [movie, setMovie] = useState([])
+    const [visibleMans, setVisibleMans] = useState(false)
+    const [visibleFacts, setVisibleFacts] = useState(false)
 
     const [fetching, isLoading] = useFetching(async () => {
-        const response = await getAllFilms.getById(params.id)
-        setMovie(response.data)
+        if (params.id !== 'random')
+            setMovie((await gets.getById(params.id)).data)
+        else
+            setMovie((await gets.getRandom()).data)
     })
 
     useEffect(() => {
-        if (!isLoading){
-            console.log(movie)
-        }
-    }, [movie])
-
-    useEffect(() => {
         fetching()
-    }, [])
+    }, [params.id])
 
 
     return (
@@ -39,17 +41,17 @@ const SingleMoviePage = () => {
                     <div className={classes.container}>
                         {movie.poster
                             ? <img className={classes.poster} src={movie.poster.url} alt="poster"/>
-                            : <img className={classes.poster} src={undefinedPost} alt="poster"/>
+                            : <img className={classes.poster} src={undefinedPoster} alt="poster"/>
                         }
                         <div className={classes.info}>
-                            <div className={classes.header}>
+                            <div className={localClasses.header}>
                                 <div>
                                     <h1 className={classes.name}>{movie.name}</h1>
                                     <h2 className={classes.altName}>{movie.alternativeName}</h2>
                                 </div>
                                 <div>
-                                    <p className={classes.rating}><span>{Number((movie.rating.kp).toFixed(1))}</span>/10</p>
-                                    <p className={classes.votes}>{movie.votes.kp + ' оценок'}</p>
+                                    <p className={localClasses.rating}><span>{Number((movie.rating.kp).toFixed(1))}</span>/10</p>
+                                    <p className={localClasses.votes}>{movie.votes.kp + ' оценок'}</p>
                                 </div>
                             </div>
                             <div className={classes.detailedInfo}>
@@ -57,32 +59,37 @@ const SingleMoviePage = () => {
                                     <li><span>Год производства: </span>{movie.year}</li>
                                     <li><span>Жанры: </span>{joinObject(movie.genres)}</li>
                                     <li><span>Страны: </span>{joinObject(movie.countries)}</li>
-                                    {/*<li><span>Актёры: </span>{movie.persons.filter(el => el.profession === 'актеры').map(person => ' ' + person.name)}</li>*/}
-                                    <li><span>Бюджет: </span>{addingSpacesInMoney(movie.budget.value) + movie.budget.currency}</li>
-                                    <li><span>Сборы в мире: </span>{addingSpacesInMoney(movie.fees.world.value) + movie.fees.world.currency}</li>
-                                    <li><span>Сборы в России: </span>{addingSpacesInMoney(movie.fees.russia.value) + movie.fees.russia.currency}</li>
-                                    <li><span>Длительность: </span>{movieLengthInHour(movie.movieLength)}</li>
+                                    {Object.values(movie.budget ?? []).length !== 0 && <li><span>Бюджет: </span>{addingSpacesInMoney(movie.budget.value) + movie.budget.currency}</li>}
+                                    {Object.values(movie.fees.world ?? []).length !== 0 && <li><span>Сборы в мире: </span>{addingSpacesInMoney(movie.fees.world.value) + movie.fees.world.currency}</li>}
+                                    {Object.values(movie.fees.russia ?? []).length !== 0 && <li><span>Сборы в России: </span>{addingSpacesInMoney(movie.fees.russia.value) + movie.fees.russia.currency}</li>}
+                                    <li><span>Длительность серии: </span>{movieLengthInHour(movie.movieLength)}</li>
                                 </ul>
                                 <div className={classes.buttons}>
-                                    <div className={classes.trailers}>
-                                        {movie.videos.trailers.map((trailer, index) =>
-                                            <ButtonLink key={index} href={trailer.url}>Трейлер {index+1}</ButtonLink>
-                                        )}
-                                    </div>
-                                    <div className={classes.col}>
-                                        <Button onClick={() => {}}>Люди</Button>
-                                    </div>
-                                    <div className={classes.col}>
-                                        <ButtonLink href={"https://www.kinopoisk.ru/film/" + movie.id}>На кинопоиск</ButtonLink>
-                                    </div>
+                                    <Button onClick={() => setVisibleMans(true)}>Люди</Button>
+                                    <ModalWindow
+                                        visible={visibleMans}
+                                        setVisible={setVisibleMans}
+                                    >
+                                        <Persons persons={movie.persons}/>
+                                    </ModalWindow>
+                                    {movie.facts && <div>
+                                        <Button onClick={() => setVisibleFacts(true)}>Факты</Button>
+                                        <ModalWindow
+                                            visible={visibleFacts}
+                                            setVisible={setVisibleFacts}
+                                        >
+                                            <Facts facts={movie.facts}/>
+                                        </ModalWindow>
+                                    </div>}
+                                    <ButtonLink href={"https://www.kinopoisk.ru/film/" + movie.id}>На кинопоиск</ButtonLink>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className={classes.description}>
+                    {movie.description && <div className={localClasses.description}>
                         <h3>Сюжет</h3>
                         <p>{movie.description}</p>
-                    </div>
+                    </div>}
                 </div>
             }
         </div>

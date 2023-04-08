@@ -7,7 +7,9 @@ import axios from "axios";
 // NYMR7T7-NC04P3Z-KK0SX7R-6WVF0SX
 // NESTZ1Y-ZMW4954-J6VH0JM-9MGT7F8
 
-export default class getAllFilms{
+const key = 'NYMR7T7-NC04P3Z-KK0SX7R-6WVF0SX'
+
+export default class gets {
     static async get(
             contentType = 'movie',
             page = 1,
@@ -29,12 +31,10 @@ export default class getAllFilms{
         if (genre)
             params.append('genres.name', genre)
 
-        console.log('resp!')
-
         const response = await axios.get('/v1/movie', {
             headers: {
                 "accept": "application/json",
-                "X-API-KEY": "RXAY6A6-91X4EZ9-NM2Z1JC-ENZGZKC"
+                "X-API-KEY": key
             },
             params: params
         })
@@ -45,7 +45,25 @@ export default class getAllFilms{
         const response = await axios.get(`/v1/movie/${id}`, {
             headers: {
                 "accept": "application/json",
-                "X-API-KEY": "RXAY6A6-91X4EZ9-NM2Z1JC-ENZGZKC"
+                "X-API-KEY": key
+            },
+        })
+        return response
+    }
+    static async getRandom(){
+        const response = await axios.get('/v1/movie/random', {
+            headers: {
+                "accept": "application/json",
+                "X-API-KEY": key
+            },
+        })
+        return response
+    }
+    static async getPersonById(id){
+        const response = await axios.get(`/v1/person/${id}`, {
+            headers: {
+                "accept": "application/json",
+                "X-API-KEY": key
             },
         })
         return response

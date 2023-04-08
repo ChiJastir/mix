@@ -43,3 +43,26 @@ export const joinObject = (obj) => {
     }
     return str.join(', ')
 }
+
+export const date = (date) => {
+    const months = {
+        '01': 'января',
+        '02': 'февраля',
+        '03': 'марта',
+        '04': 'апреля',
+        '05': 'мая',
+        '06': 'июня',
+        '07': 'июля',
+        '08': 'августа',
+        '09': 'сентября',
+        '10': 'октября',
+        '11': 'ноября',
+        '12': 'декабря',
+    }
+
+    const myDate = date.match(/\d\d\d\d-\d\d-\d\d/)[0].split('-')
+    const year = myDate[0]
+    const month = months[myDate[1]]
+    const day = myDate[2].replace(/^0+/, '')
+    return day + ' ' + month + ' ' + year
+}

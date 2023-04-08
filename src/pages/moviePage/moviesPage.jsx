@@ -2,12 +2,12 @@ import React, {useEffect, useRef, useState} from 'react';
 import Heading from "../../UI/heading/heading";
 import Card from "../../components/card/card";
 import Loader from "../../UI/loader/loader";
-import getAllFilms from "../../API/getAllFilms";
+import gets from "../../API/gets";
 import {useFetching} from "../../hooks/useFething";
-import classes from './movie.module.css'
+import classes from './moviesPage.module.css'
 import Search from "../../components/searchAndFilters/search";
 
-const MoviePage = () => {
+const MoviesPage = () => {
     const [movies, setMovies] = useState([])
     const [page, setPage] = useState(1)
 
@@ -21,7 +21,7 @@ const MoviePage = () => {
     const observer = useRef()
 
     async function loadMovies(){
-        const zxc = await getAllFilms.get(contentType, page, search, filter, year, genre)
+        const zxc = await gets.get(contentType, page, search, filter, year, genre)
         if (page <= 1){
             setMovies([])
             setMovies(zxc.data.docs)
@@ -37,6 +37,7 @@ const MoviePage = () => {
         if (observer.current) observer.current.disconnect()
         var callback = function(entries) {
             if (entries[0].isIntersecting && movies.length % 10 === 0){
+                console.log(movies.length)
                 setPage(page+ 1)
             }
         };
@@ -52,6 +53,7 @@ const MoviePage = () => {
         <div className={classes.template}>
             <aside className={classes.search}>
                 <Search
+                    setMovies={setMovies}
                     setYear={setYear}
                     setContentType={setContentType}
                     setFilter={setFilter}
@@ -74,4 +76,4 @@ const MoviePage = () => {
     )
 }
 
-export default MoviePage;
+export default MoviesPage;
