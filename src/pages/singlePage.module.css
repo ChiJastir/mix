@@ -40,10 +40,13 @@
     margin: 0;
 }
 
+.detailedInfo{
+    margin-top: 20px;
+}
+
 .detailedInfo ul{
     list-style: none;
     margin: 0;
-    margin-top: 20px;
     padding: 0;
 }
 
@@ -58,12 +61,12 @@
 
 .buttons{
     display: flex;
-    margin: 3px
+    gap: 10px;
 }
 
 .buttons a,
 .buttons button{
-    margin-right: 5px;
+    /*margin-right: 5px;*/
 }
 
 .content h3{
@@ -72,4 +75,41 @@
     font-size: 24px;
     color: #8841ff;
     text-align: center;
+}
+
+@media (max-width: 800px){
+    .content{
+        padding: 20px;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .poster,
+    .photo{
+        width: 100%;
+    }
+
+    .info{
+        margin: 0;
+    }
+
+    .buttons{
+        flex-wrap: wrap;
+
+    }
+
+    .name{
+        font-size: 30px;
+    }
+
+    .altName,
+    .enName{
+        font-size: 20px;
+    }
+
+    .detailedInfo{
+        margin: 0;
+    }
 }

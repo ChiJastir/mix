@@ -27,9 +27,8 @@ const Card = ({data}) => {
                     )}
                 </p>
                 <p>Год выпуска: {data.year}</p>
-                <div className={classes.buttons}>
+                <div className={classes.button}>
                     <Button onClick={() => router(`/movie/${data.id}`)}>Подробнее</Button>
-                    {/*<Button href={"https://www.kinopoisk.ru/film/" + data.id}>На кинопоиск</Button>*/}
                 </div>
             </div>
         </div>
