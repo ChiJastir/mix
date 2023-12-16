@@ -1,8 +1,8 @@
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MainPage from "./pages/mainPage/mainPage";
-import MoviesPage from "./pages/moviePage/moviesPage";
-import classes from "./pages/moviePage/moviesPage.module.css";
+import MoviesPage from "./pages/moviesPage/moviesPage";
+import classes from "./pages/moviesPage/moviesPage.module.css";
 import Header from "./components/header/header";
 import React from "react";
 import SingleMoviePage from "./pages/singleMoviePage/singleMoviePage";

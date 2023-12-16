@@ -8,14 +8,14 @@ const Persons = ({persons}) => {
         <div className={classes.persons}>
             <h3>Люди</h3>
             <ul>
-                {professions.map((profession,index) =>
+                {professions.map((profession, index) =>
                     persons.filter(el => el.profession === profession)[0] &&
                     <li key={index}>
                         <span>{profession}: </span>
                         {persons.filter(el => el.profession === profession).map((person, ind) =>
                             person.name &&
                             <Link key={ind} to={'/person/' + person.id}>
-                                {person.name},
+                                {person !== persons.filter(el => el.profession === profession)[persons.filter(el => el.profession === profession).length - 1] ? person.name + ', ' : person.name}
                             </Link>)
                         }
                     </li>
