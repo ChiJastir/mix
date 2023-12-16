@@ -1,0 +1,15 @@
+.facts ul{
+    ul{
+        list-style: none;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        li{
+            color: #3a3a3a;
+            padding: 15px 0;
+        }
+        li + li{
+            border-top: 1px #8841ff solid;
+        }
+    }
+}

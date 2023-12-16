@@ -1,0 +1,15 @@
+.persons{
+    span{
+        color: #8841ff;
+        text-transform: capitalize;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    &:hover{
+        color: #8841ff;
+    }
+}

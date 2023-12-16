@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import {useFetching} from "../../hooks/useFething";
 import gets from "../../API/gets";
-import classes from '../singlePage.module.css'
-import localClasses from './personPage.module.css'
+import classes from '../singlePage.module.scss'
+import localClasses from './personPage.module.scss'
 import Loader from "../../UI/loader/loader";
 import undefinedPhotoPerson from "../../img/null-photo-person.png";
 import {date, joinObject} from "../../utils/utils";

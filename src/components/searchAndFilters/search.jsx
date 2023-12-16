@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import classes from './search.module.css'
+import classes from './search.module.scss'
 import Heading from "../../UI/heading/heading";
 import Button from "../../UI/button/button";
 import Input from "../../UI/input/input";

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './loader.module.css'
+import classes from './loader.module.scss'
 import logo from '../../img/logo.svg'
 
 const Loader = () => {

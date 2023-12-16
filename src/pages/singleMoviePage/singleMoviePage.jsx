@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import classes from '../singlePage.module.css'
-import localClasses from  './singleMoviePage.module.css'
+import classes from '../singlePage.module.scss'
+import localClasses from './singleMoviePage.module.scss'
 import {useParams} from "react-router-dom";
 import {useFetching} from "../../hooks/useFething";
 import gets from "../../API/gets";

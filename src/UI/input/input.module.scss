@@ -1,0 +1,26 @@
+.label{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 0 40px;
+}
+
+.img{
+    height: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.input{
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+    caret-color: white;
+
+    &:focus{
+        outline: none;
+    }
+
+    &::placeholder{
+        color: white;
+    }
+}

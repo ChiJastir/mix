@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from "../../UI/button/button";
-import classes from './personMovie.module.css'
+import classes from './personMovies.module.scss'
 import star from "../../img/star.svg";
 import {useNavigate} from "react-router-dom";
 

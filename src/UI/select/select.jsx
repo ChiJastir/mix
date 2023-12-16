@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './select.module.css'
+import classes from './select.module.scss'
 
 const Select = ({options, value, sortMovies, className, heading}) => {
     return (

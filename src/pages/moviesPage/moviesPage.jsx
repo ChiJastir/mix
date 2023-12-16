@@ -4,13 +4,13 @@ import Card from "../../components/card/card";
 import Loader from "../../UI/loader/loader";
 import gets from "../../API/gets";
 import {useFetching} from "../../hooks/useFething";
-import classes from './moviesPage.module.css'
+import classes from './moviesPage.module.scss'
 import Search from "../../components/searchAndFilters/search";
 import MobilePanelLeft from "../../UI/mobilePanelLeft/mobilePanelLeft";
 import {useResize} from "../../hooks/useResize";
 import ButtonSearch from "../../UI/buttonSearch/buttonSearch";
 import useOnScreen from "../../hooks/useOnScreen";
-import {NavLink, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
 
 const MoviesPage = () => {

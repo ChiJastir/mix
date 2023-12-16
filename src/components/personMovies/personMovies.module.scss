@@ -1,0 +1,31 @@
+.movie{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+
+    & + &{
+        border-top: 1px #8841ff solid;
+    }
+
+    h4{
+        font-size: 18px;
+        margin: 0;
+    }
+}
+
+.stars{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.star{
+    height: 21px;
+    width: 21px;
+}
+
+.rating{
+    margin: 0;
+    font-size: 18px;
+}

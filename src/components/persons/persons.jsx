@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './persons.module.css'
+import classes from './persons.module.scss'
 import {Link} from "react-router-dom";
 
 const Persons = ({persons}) => {

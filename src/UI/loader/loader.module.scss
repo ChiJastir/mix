@@ -1,0 +1,29 @@
+.loader{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px #746EDD dashed;
+    animation: load 1.2s infinite linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 75%;
+        height: 75%;
+    }
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+        scale: 1;
+    }
+    50% {
+        scale: 0.8;
+    }
+    to {
+        transform: rotate(360deg);
+        scale: 1;
+    }
+}

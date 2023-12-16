@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './input.module.css'
+import classes from './input.module.scss'
 import search from '../../img/search.svg'
 
 const Input = (props) => {

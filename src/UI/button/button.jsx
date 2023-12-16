@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './button.module.css'
+import classes from './button.module.scss'
 
 const Button = ({onClick, className, children}) => {
     return (

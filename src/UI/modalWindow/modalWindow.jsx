@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './modalWindow.module.css'
+import s from './modalWindow.module.scss'
 
 const ModalWindow = ({children, visible, setVisible, className}) => {
     const classes = [s.window]

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './mobilePanelTop.module.css'
+import classes from './mobilePanelTop.module.scss'
 import Button from "../button/button";
 
 const MobilePanelTop = ({children, visible, setVisible}) => {

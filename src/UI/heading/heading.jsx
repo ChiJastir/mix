@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './heading.module.css'
+import classes from './heading.module.scss'
 
 const Heading = ({className, children}) => {
     return (

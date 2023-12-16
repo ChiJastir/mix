@@ -1,0 +1,27 @@
+.window{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 10;
+}
+
+.window.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel{
+    padding: 25px;
+    background-color: white;
+    min-width: 400px;
+    margin: 0 25px;
+    max-width: 1000px;
+    max-height: 80vh;
+    border-radius: 15px;
+    overflow-y: auto;
+}

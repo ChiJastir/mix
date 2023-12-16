@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import classes from "./header.module.css";
+import classes from "./header.module.scss";
 import {useNavigate} from "react-router-dom";
 import burgerMenu from '../../img/burger-menu.png'
 import MobilePanelTop from "../../UI/mobilePanelTop/mobilePanelTop";

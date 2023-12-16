@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './facts.module.css'
+import classes from './facts.module.scss'
 
 const Facts = ({facts}) => {
     return (

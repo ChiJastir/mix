@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './mainPage.module.css'
+import classes from './mainPage.module.scss'
 
 const MainPage = () => {
     return (

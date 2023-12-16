@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './buttonLink.module.css'
+import classes from './buttonLink.module.scss'
 
 const ButtonLink = ({href, className, children}) => {
     return (
