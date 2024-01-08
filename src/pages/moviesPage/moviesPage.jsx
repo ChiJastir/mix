@@ -6,36 +6,41 @@ import gets from "../../API/gets";
 import {useFetching} from "../../hooks/useFething";
 import classes from './moviesPage.module.scss'
 import Search from "../../components/searchAndFilters/search";
-import MobilePanelLeft from "../../UI/mobilePanelLeft/mobilePanelLeft";
+import MobilePanel from "../../UI/mobilePanel/mobilePanel";
 import {useResize} from "../../hooks/useResize";
 import ButtonSearch from "../../UI/buttonSearch/buttonSearch";
 import useOnScreen from "../../hooks/useOnScreen";
-import {useNavigate} from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
+import {useDispatch, useSelector} from "react-redux";
+import {setList, setPage} from "../../store/slices/moviesSlice";
 
 const MoviesPage = () => {
-    const [movies, setMovies] = useState([])
-    const [page, setPage] = useState(1)
+    const {
+        moviesList,
+        page
+    } = useSelector((state) => state.movies)
 
-    const [contentType, setContentType] = useState('movie')
-    const [year, setYear] = useState('1860-2030')
-    const [search, setSearch] = useState('')
-    const [filter, setFilter] = useState('votes.kp')
-    const [genre, setGenre] = useState('')
+    const {
+        searchQuery,
+        contentType,
+        years,
+        filter,
+        genre
+    } = useSelector((state) => state.search)
+
+    const dispatch = useDispatch()
 
     const [visible, setVisible] = useState(false)
 
     const width = useResize()
-    const router = useNavigate()
-
     const lastElem = useRef()
 
     async function loadMovies(){
-        const req = await gets.get(contentType, page, search, filter, year, genre)
+        const req = await gets.getMovies(contentType, page, searchQuery, filter, years, genre)
         if (page <= 1){
-            setMovies(req.data.docs)
+            dispatch(setList(req.data.docs))
         } else {
-            setMovies([...movies, ...req.data.docs])
+            dispatch(setList([...moviesList, ...req.data.docs]))
         }
     }
 
@@ -44,47 +49,35 @@ const MoviesPage = () => {
     const isVisible = useOnScreen(lastElem)
 
     useEffect(() => {
-        if (isVisible && movies.length > 0){
-            setPage(page+ 1)
+        if (isVisible && moviesList.length > 0){
+            dispatch(setPage(page + 1))
         }
     }, [isVisible])
 
     useEffect( () => {
         fetching()
-    }, [page, contentType, search, filter, year, genre])
+    }, [page, contentType, searchQuery, filter, years, genre])
 
     return (
         <div className={classes.template}>
             {width <= 850 && <ButtonSearch onClick={() => setVisible(true)}>Показать</ButtonSearch>}
-            {width <= 850 && <MobilePanelLeft visible={visible} setVisible={setVisible}>
+            {width <= 850 && <MobilePanel visible={visible} setVisible={setVisible} isHorizontal={true}>
                 <Search
-                    setMovies={setMovies}
-                    setYear={setYear}
-                    setContentType={setContentType}
-                    setFilter={setFilter}
-                    setSearch={setSearch}
-                    setGenre={setGenre}
-                    setPage={setPage}
-                    setVisible={setVisible}
+                    setMovies
+                    setGenre
+                    setVisible
                 />
                 <br/>
-            </MobilePanelLeft>}
-            {width > 850 && <aside className={classes.search}>
-                {width > 850 && <Navigation className={classes.navigation}/>}
+            </MobilePanel>}
+            {width > 850 && <Navigation>
                 <Search
-                    setMovies={setMovies}
-                    setYear={setYear}
-                    setContentType={setContentType}
-                    setFilter={setFilter}
-                    setSearch={setSearch}
-                    setGenre={setGenre}
                     setPage={setPage}
                     setVisible={setVisible}
                 />
-            </aside>}
+            </Navigation>}
             <div className={classes.content}>
                 <Heading>Каталог</Heading>
-                {movies.map(item => <Card key={item.id} data={item}/>)}
+                {moviesList.map(item => <Card key={item.id} data={item}/>)}
                 <div ref={lastElem} className={classes.loader}><Loader/></div>
             </div>
         </div>

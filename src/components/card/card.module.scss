@@ -6,7 +6,7 @@
 }
 
 .cardBody{
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .poster{
@@ -17,21 +17,27 @@
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-}
 
-.star{
-    height: 21px;
-    width: 21px;
-}
+    svg{
+        height: 21px;
+        width: 21px;
+        transform: translateY(-1px);
+        g{
+            path{
+                fill: var(--main-color);
+            }
+        }
+    }
 
-.rating{
-    margin: 0;
-    font-size: 18px;
+    p{
+        margin: 0;
+        font-size: 18px;
+    }
 }
 
 .heading{
     margin: 0;
-    color: #8841ff;
+    color: var(--main-color);
     font-size: 22px;
 }
 
@@ -43,10 +49,6 @@
 .genre{
     text-transform: capitalize;
     margin: 0;
-}
-
-.button{
-    display: flex;
 }
 
 @media (max-width: 600px) {
@@ -62,9 +64,5 @@
 
     .cardBody{
         padding: 10px;
-    }
-
-    .button{
-        justify-content: center;
     }
 }

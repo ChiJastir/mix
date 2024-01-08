@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './loader.module.scss'
-import logo from '../../img/logo.svg'
+import logo from '../../assets/logo.svg'
 
 const Loader = () => {
     return (

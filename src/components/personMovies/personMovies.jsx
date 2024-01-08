@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from "../../UI/button/button";
 import classes from './personMovies.module.scss'
-import star from "../../img/star.svg";
+import star from "../../assets/star.svg";
 import {useNavigate} from "react-router-dom";
 
 const PersonMovies = ({movies}) => {

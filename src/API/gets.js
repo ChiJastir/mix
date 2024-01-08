@@ -9,26 +9,8 @@ import axios from "axios";
 
 const key = 'S9SE1F5-0YRM6ZE-NYR1BQS-46DD1SP'
 
-const selectFields = [
-    "id",
-    "name",
-    "alternativeName",
-    "type",
-    "year",
-    "description",
-    "shortDescription",
-    "movieLength",
-    "poster",
-    "backdrop",
-    "rating",
-    "votes",
-    "genres",
-    "countries",
-    "facts"
-]
-
 export default class gets {
-    static async get(
+    static async getMovies(
             contentType = 'movie',
             page = 1,
             search = '',
@@ -45,11 +27,6 @@ export default class gets {
         params.append('year', year)
         params.append('page', page.toString())
         params.append('limit', limit.toString())
-        // params.append('notNullFields', 'facts.value')
-        // for(let i = 0; i < selectFields.length; i++){
-        //     params.append('selectFields', selectFields[i])
-        // }
-        console.log(321)
 
         if (search)
             params.append('name', search)

@@ -7,7 +7,7 @@
 }
 
 .listItem{
-    padding: 10px 0;
+    padding: 10px 20px;
     text-decoration: none;
     display: block;
     color: var(--gray-text);
@@ -28,4 +28,15 @@
 .linkActive{
     color: var(--dark-main-color);
     background-color: var(--bg-color);
+}
+
+.aside{
+    background-color: var(--dark-bg-color);
+    padding: 25px 0;
+    min-width: 280px;
+    min-height: 100dvh;
+}
+
+.children{
+    padding: 0 20px;
 }

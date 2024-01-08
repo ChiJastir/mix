@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     background-color: var(--main-color);
+    gap: 25px;
 }
 
 .logo{
@@ -20,12 +21,9 @@
     border-radius: 10px;
 }
 
-@media (max-width: 850px){
-    .header{
-        padding: 5px 20px;
-    }
-
-    .logo{
-        width: 150px;
+@media (max-width: 850px) {
+    header{
+        padding: 0 25px;
+        justify-content: space-between;
     }
 }

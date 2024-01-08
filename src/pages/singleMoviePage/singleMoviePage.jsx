@@ -5,7 +5,7 @@ import {useParams} from "react-router-dom";
 import {useFetching} from "../../hooks/useFething";
 import gets from "../../API/gets";
 import Loader from "../../UI/loader/loader";
-import undefinedPoster from "../../img/null-poster.png";
+import undefinedPoster from "../../assets/null-poster.png";
 import {movieLengthInHour, joinObject, addingSpacesInMoney, rgbToHex, contrastingColor} from "../../utils/utils";
 import ButtonLink from "../../UI/buttonLink/buttonLink";
 import Button from "../../UI/button/button";
@@ -39,12 +39,12 @@ const SingleMoviePage = () => {
         if (isLoading) return
         const img = document.getElementsByTagName('img')[1]
 
-        // if (img.complete) {
-        //     console.log(rgbToHex(asd.getColor(img)))
-        //     // console.log(img)
+        // if (assets.complete) {
+        //     console.log(rgbToHex(asd.getColor(assets)))
+        //     // console.log(assets)
         // }
 
-        // asd.getColor(<img src={movie.poster.url} crossOrigin={'anonymous'}/>)
+        // asd.getColor(<assets src={movie.poster.url} crossOrigin={'anonymous'}/>)
         //     .then(color => { console.log(color) })
         //     .catch(err => { console.log(err) })
         const dsa = document.createElement('img')

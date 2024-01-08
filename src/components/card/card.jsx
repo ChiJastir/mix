@@ -1,22 +1,19 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom'
 import classes from './card.module.scss'
-import star from '../../img/star.svg'
-import undefinedPoster from '../../img/null-poster.png'
+import { ReactComponent as Star } from '../../assets/star.svg'
+import undefinedPoster from '../../assets/null-poster.png'
 import Button from "../../UI/button/button";
 
 const Card = ({data}) => {
     const router = useNavigate()
     return (
         <div className={classes.card}>
-            {data.poster
-                ? <img className={classes.poster} src={data.poster.url} alt="poster"/>
-                : <img className={classes.poster} src={undefinedPoster} alt="poster"/>
-            }
+            <img className={classes.poster} src={data.poster ? data.poster.url : undefinedPoster} alt="poster"/>
             <div className={classes.cardBody}>
                 <div className={classes.stars}>
-                    <img className={classes.star} src={star} alt="star"/>
-                    <p className={classes.rating}>{Number((data.rating.kp).toFixed(1)) + '/10'}</p>
+                    <Star/>
+                    <p>{Number((data.rating.kp).toFixed(1)) + '/10'}</p>
                 </div>
                 <h3 className={classes.heading}>{data.name}</h3>
                 <p className={classes.description}>{data.shortDescription}</p>
@@ -27,9 +24,7 @@ const Card = ({data}) => {
                     )}
                 </p>
                 <p>Год выпуска: {data.year}</p>
-                <div className={classes.button}>
-                    <Button onClick={() => router(`/movie/${data.id}`)}>Подробнее</Button>
-                </div>
+                <Button onClick={() => router(`/movie/${data.id}`)}>Подробнее</Button>
             </div>
         </div>
     );

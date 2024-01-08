@@ -1,14 +1,15 @@
 import React from 'react';
 import classes from './input.module.scss'
-import search from '../../img/search.svg'
+import search from '../../assets/search.svg'
 
-const Input = (props) => {
+const Input = ({className, register, ...props}) => {
     return (
         <label className={classes.label}>
             <img className={classes.img} src={search} alt="search"/>
             <input
                 {...props}
-                className={classes.input + ' ' + props.className}
+                {...register}
+                className={[classes.input, className].join(' ')}
             >
             </input>
         </label>

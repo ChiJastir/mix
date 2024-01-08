@@ -1,0 +1,37 @@
+.panel{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: var(--dark-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition-duration: 250ms;
+    transition-property: top, left;
+
+    &.top{
+        left: 0;
+        top: -100vh;
+    }
+
+    &.top.active{
+        top: 0;
+    }
+
+    &.left{
+        left: -100vh;
+        top: 0;
+    }
+
+    &.left.active{
+        left: 0;
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

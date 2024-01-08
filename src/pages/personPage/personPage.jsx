@@ -5,7 +5,7 @@ import gets from "../../API/gets";
 import classes from '../singlePage.module.scss'
 import localClasses from './personPage.module.scss'
 import Loader from "../../UI/loader/loader";
-import undefinedPhotoPerson from "../../img/null-photo-person.png";
+import undefinedPhotoPerson from "../../assets/nullPhotoPerson.png";
 import {date, joinObject} from "../../utils/utils";
 import Button from "../../UI/button/button";
 import ModalWindow from "../../UI/modalWindow/modalWindow";

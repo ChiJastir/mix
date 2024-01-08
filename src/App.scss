@@ -1,6 +1,8 @@
 :root{
+    --light-main-color: #ff636c;
     --main-color: #ff424f;
     --dark-main-color: #e83441;
+    --light-bg-color: #313b46;
     --bg-color: #222b31;
     --dark-bg-color: #191c1f;
     --gray-text: #bebebe;
@@ -26,11 +28,4 @@ body{
     &::-webkit-scrollbar-thumb {
         background-color: var(--dark-main-color);
     }
-}
-
-.container{
-    /*max-width: 1200px;*/
-    /*width: calc(100% - 50px);*/
-    /*margin: 0 auto;*/
-    /*padding: 0 25px;*/
 }

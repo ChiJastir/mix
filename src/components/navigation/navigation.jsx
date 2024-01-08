@@ -1,22 +1,41 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import classes from "./navigation.module.scss";
-import {NavLink, useNavigate} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
-const Navigation = ({className}, props) => {
-    const router = useNavigate()
+const links = [
+    {
+        path: '/',
+        name: 'Главная'
+    },
+    {
+        path: '/movie',
+        name: 'Фильмы'
+    },
+    {
+        path: '/cartoon',
+        name: 'Мультфильмы'
+    },
+    {
+        path: '/anime',
+        name: 'Аниме'
+    },
+    {
+        path: '/movie/random',
+        name: 'Случайный фильм'
+    },
 
+]
+
+const Navigation = ({className, children}, props) => {
     return (
-        <ul className={[classes.list, className].join(' ')} {...props}>
-            <li><NavLink to={'/'} className={({ isActive }) => (isActive ? [classes.linkActive, classes.listItem].join(' ') : classes.listItem)}>Главная</NavLink></li>
-            <li><NavLink to={'/movies'} className={({ isActive }) => (isActive ? [classes.linkActive, classes.listItem].join(' ') : classes.listItem)}>Фильмы</NavLink></li>
-            <li><NavLink to={'/cartoons'} className={({ isActive }) => (isActive ? [classes.linkActive, classes.listItem].join(' ') : classes.listItem)}>Мультфильмы</NavLink></li>
-            <li onClick={() => {
-                if (!window.location.href.includes('random'))
-                    router('/movie/random')
-                else
-                    router(0)
-            }} className={classes.listItem}>Случайный фильм</li>
-        </ul>
+        <aside className={classes.aside}>
+            <ul className={[classes.list, className].join(' ')} {...props}>
+                {links.map(link => <li key={link.path}><NavLink to={link.path} className={({ isActive }) => (isActive ? [classes.linkActive, classes.listItem].join(' ') : classes.listItem)}>{link.name}</NavLink></li>)}
+            </ul>
+            <div className={classes.children}>
+                {children}
+            </div>
+        </aside>
     );
 };
 

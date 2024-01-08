@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './buttonSearch.module.scss'
-import search from '../../img/search.png'
+import search from '../../assets/search.svg'
 
 const ButtonSearch = ({className, onClick}) => {
     return (

@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     padding: 5px;
-    margin: 0 40px;
 }
 
 .img{
@@ -15,6 +14,10 @@
     outline: none;
     border: none;
     caret-color: white;
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: normal;
 
     &:focus{
         outline: none;

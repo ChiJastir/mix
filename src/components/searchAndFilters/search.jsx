@@ -1,108 +1,108 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './search.module.scss'
 import Heading from "../../UI/heading/heading";
 import Button from "../../UI/button/button";
-import Input from "../../UI/input/input";
-import Select from "../../UI/select/select";
+import {useDispatch} from "react-redux";
+import {contentType, filter, genre, years} from '../../store/slices/searchSlice'
+import {setList, setPage} from '../../store/slices/moviesSlice'
+import MySelect from "../../UI/select/select";
+import {useLocation, useNavigate, useNavigation} from "react-router-dom";
 
-const Search = ({className, setMovies, setVisible, setSearch, setFilter, setContentType, setYear, setGenre, setPage}) => {
-    const [localSearch, setLocalSearch] = useState('')
-    const [localFilter, setLocalFilter] = useState('votes.kp')
-    const [localContentType, setLocalContentType] = useState('movie')
-    const [localYear, setLocalYear] = useState('1860-2030')
-    const [localGenre, setLocalGenre] = useState('')
+const Search = ({className, setVisible}) => {
+    const [localFilter, setLocalFilter] = useState({value: 'votes.kp', label: 'Сортировка'})
+    const [localContentType, setLocalContentType] = useState({value: 'movie', label: 'Тип'})
+    const [localYear, setLocalYear] = useState({value: '1860-2030', label: 'Годы'})
+    const [localGenre, setLocalGenre] = useState({value: '', label: 'Жанры'})
+
+    const dispatch = useDispatch()
+
+    const path = useLocation()
+
+    useEffect(() => {
+        dispatch(contentType((path.pathname).split('/').join('')))
+    }, [])
 
     function clickBtn() {
-        setMovies([])
-        setPage(1)
-        setGenre(localGenre)
-        setYear(localYear)
-        setContentType(localContentType)
-        setFilter(localFilter)
-        setSearch(localSearch)
+        dispatch(setList([]))
+        dispatch(setPage(1))
         setVisible(false)
+
+        dispatch(years(localYear.value))
+        dispatch(filter(localFilter.value))
+        dispatch(genre(localGenre.value))
     }
 
     return (
-        <aside className={[classes.container, className].join(' ')}>
+        <aside style={{marginTop: 10}} className={[classes.container, className].join(' ')}>
             <Heading>Поиск</Heading>
             <div className={classes.search_and_filters}>
-                <Input value={localSearch} onChange={event => setLocalSearch(event.target.value)} className={classes.input} placeholder={"Поиск"}/>
-                <hr/>
-                <Select
-                    className={classes.select}
-                    heading={'Тип'}
+                {/*<MySelect*/}
+                {/*    placeholder={'Тип'}*/}
+                {/*    options={[*/}
+                {/*        {value: 'movie', label: 'Фильмы'},*/}
+                {/*        {value: 'cartoon', label: 'Мультфильмы'},*/}
+                {/*        {value: 'anime', label: 'Аниме'},*/}
+                {/*    ]}*/}
+                {/*    selectedOption={localContentType}*/}
+                {/*    setSelectedOption={setLocalContentType}*/}
+                {/*/>*/}
+                {/*<hr/>*/}
+                <MySelect
+                    placeholder={'Сортировка'}
                     options={[
-                        {value: 'movie', name: 'Фильмы'},
-                        {value: 'cartoon', name: 'Мультфильмы'},
-                        {value: 'anime', name: 'Аниме'},
+                        {value: 'votes.kp', label: 'По популярности'},
+                        {value: 'rating.kp', label: 'По рейтингу'},
                     ]}
-                    value={localContentType}
-                    sortMovies={key => setLocalContentType(key)}
+                    selectedOption={localFilter}
+                    setSelectedOption={setLocalFilter}
                 />
                 <hr/>
-                <Select
-                    className={classes.select}
-                    heading={'Сортировка'}
+                <MySelect
+                    placeholder={'Годы'}
                     options={[
-                        {value: 'votes.kp', name: 'По популярности'},
-                        {value: 'rating.kp', name: 'По рейтингу'},
+                        {value: '1860-2030', label: 'Все годы'},
+                        {value: '2020-' + new Date().getFullYear(), label: '2020-' + new Date().getFullYear()},
+                        {value: '2015-2020', label: '2015-2020'},
+                        {value: '2010-2015', label: '2010-2015'},
+                        {value: '2005-2010', label: '2005-2010'},
+                        {value: '2000-2005', label: '2000-2005'},
+                        {value: '1990-2000', label: '1990-2000'},
+                        {value: '1980-1990', label: '1980-1990'},
+                        {value: '1970-1980', label: '1970-1980'},
+                        {value: '1860-1970', label: 'До 1970'},
                     ]}
-                    value={localFilter}
-                    sortMovies={key => setLocalFilter(key)}
+                    selectedOption={localYear}
+                    setSelectedOption={setLocalYear}
                 />
                 <hr/>
-                <Select
-                    className={classes.select}
-                    heading={'Годы'}
+                <MySelect
+                    placeholder={'Жанр'}
                     options={[
-                        {value: '1860-2030', name: 'Все годы'},
-                        {value: '2020-' + new Date().getFullYear(), name: '2020-' + new Date().getFullYear()},
-                        {value: '2015-2020', name: '2015-2020'},
-                        {value: '2010-2015', name: '2010-2015'},
-                        {value: '2005-2010', name: '2005-2010'},
-                        {value: '2000-2005', name: '2000-2005'},
-                        {value: '1990-2000', name: '1990-2000'},
-                        {value: '1980-1990', name: '1980-1990'},
-                        {value: '1970-1980', name: '1970-1980'},
-                        {value: '1860-1970', name: 'До 1970'},
+                        {value: '', label: 'Все жанры'},
+                        {value: 'биография', label: 'Биография'},
+                        {value: 'боевик', label: 'Боевик'},
+                        {value: 'вестерн', label: 'Вестерн'},
+                        {value: 'военный', label: 'Военный'},
+                        {value: 'детектив', label: 'Детектив'},
+                        {value: 'документальный', label: 'Документальный'},
+                        {value: 'драма', label: 'Драма'},
+                        {value: 'история', label: 'История'},
+                        {value: 'комедия', label: 'Комедия'},
+                        {value: 'криминал', label: 'Криминал'},
+                        {value: 'мелодрама', label: 'Мелодрама'},
+                        {value: 'мюзикл', label: 'Мюзикл'},
+                        {value: 'приключения', label: 'Приключения'},
+                        {value: 'семейный', label: 'Семейный'},
+                        {value: 'триллер', label: 'Триллер'},
+                        {value: 'ужасы', label: 'Ужасы'},
+                        {value: 'фантастика', label: 'Фантастика'},
+                        {value: 'фэнтези', label: 'Фэнтези'},
                     ]}
-                    value={localYear}
-                    sortMovies={key => setLocalYear(key)}
-                />
-                <hr/>
-                <Select
-                    className={classes.select}
-                    heading={'Жанр'}
-                    options={[
-                        {value: '', name: 'Все жанры'},
-                        {value: 'биография', name: 'Биография'},
-                        {value: 'боевик', name: 'Боевик'},
-                        {value: 'вестерн', name: 'Вестерн'},
-                        {value: 'военный', name: 'Военный'},
-                        {value: 'детектив', name: 'Детектив'},
-                        {value: 'документальный', name: 'Документальный'},
-                        {value: 'драма', name: 'Драма'},
-                        {value: 'история', name: 'История'},
-                        {value: 'комедия', name: 'Комедия'},
-                        {value: 'криминал', name: 'Криминал'},
-                        {value: 'мелодрама', name: 'Мелодрама'},
-                        {value: 'мюзикл', name: 'Мюзикл'},
-                        {value: 'приключения', name: 'Приключения'},
-                        {value: 'семейный', name: 'Семейный'},
-                        {value: 'триллер', name: 'Триллер'},
-                        {value: 'ужасы', name: 'Ужасы'},
-                        {value: 'фантастика', name: 'Фантастика'},
-                        {value: 'фэнтези', name: 'Фэнтези'},
-                    ]}
-                    value={localGenre}
-                    sortMovies={key => setLocalGenre(key)}
+                    selectedOption={localGenre}
+                    setSelectedOption={setLocalGenre}
                 />
                 <div className={classes.btn_cont}>
-                    <Button
-                        onClick={() => clickBtn()}
-                        search={localSearch}
-                    >Искать</Button>
+                    <Button onClick={() => clickBtn()}>Искать</Button>
                 </div>
             </div>
         </aside>
