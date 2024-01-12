@@ -1,17 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import {useNavigate, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {useFetching} from "../../hooks/useFething";
 import gets from "../../API/gets";
 import classes from '../singlePage.module.scss'
-import localClasses from './personPage.module.scss'
 import Loader from "../../UI/loader/loader";
 import undefinedPhotoPerson from "../../assets/nullPhotoPerson.png";
 import {date, joinObject} from "../../utils/utils";
 import Button from "../../UI/button/button";
 import ModalWindow from "../../UI/modalWindow/modalWindow";
 import Facts from "../../components/facts/facts";
-import Persons from "../../components/persons/persons";
-import PersonMovies from "../../components/personMovies/personMovies";
+import PersonMovies from "../../components/entities/persons/movies/personMovies";
 import ButtonLink from "../../UI/buttonLink/buttonLink";
 
 const PersonPage = () => {
