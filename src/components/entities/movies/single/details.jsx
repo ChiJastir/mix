@@ -62,7 +62,13 @@ const Details = ({ movie }) => {
     return (
         <div className={classes.detailedInfo}>
             <ul>
-                {movieDetails().map(detail => <li><span>{detail.title}:</span> {detail.value}</li>)}
+                {
+                    movieDetails().map(detail =>
+                    <li key={detail.title}>
+                        <span>{detail.title}: </span>
+                        {detail.value}
+                    </li>)
+                }
             </ul>
             <div className={classes.buttons}>
                 <Button onClick={() => setVisibleMans(true)}>Люди</Button>
