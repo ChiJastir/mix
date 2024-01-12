@@ -12,24 +12,24 @@ export const searchSlice = createSlice({
     name: 'search',
     initialState,
     reducers: {
-        searchQuery: (state, action) => {
+        setSearchQuery: (state, action) => {
             state.searchQuery = action.payload
         },
-        contentType: (state, action) => {
+        setContentType: (state, action) => {
             state.contentType = action.payload
         },
-        years: (state, action) => {
+        setYears: (state, action) => {
             state.years = action.payload
         },
-        filter: (state, action) => {
+        setFilter: (state, action) => {
             state.filter = action.payload
         },
-        genre: (state, action) => {
+        setGenre: (state, action) => {
             state.genre = action.payload
         },
     },
 })
 
-export const { searchQuery, contentType, years, filter, genre } = searchSlice.actions
+export const { setSearchQuery, setContentType, setYears, setFilter, setGenre } = searchSlice.actions
 
 export default searchSlice.reducer

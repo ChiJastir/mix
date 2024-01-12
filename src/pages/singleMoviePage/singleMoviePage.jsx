@@ -6,13 +6,12 @@ import {useFetching} from "../../hooks/useFething";
 import gets from "../../API/gets";
 import Loader from "../../UI/loader/loader";
 import undefinedPoster from "../../assets/null-poster.png";
-import {movieLengthInHour, joinObject, addingSpacesInMoney, rgbToHex, contrastingColor} from "../../utils/utils";
-import ButtonLink from "../../UI/buttonLink/buttonLink";
+import {movieLengthInHour, joinObject, addingSpacesInMoney} from "../../utils/utils";
 import Button from "../../UI/button/button";
 import ModalWindow from "../../UI/modalWindow/modalWindow";
 import Persons from "../../components/persons/persons";
-import Facts from "../../components/facts/facts";
-import ColorThief from "colorthief/dist/color-thief";
+
+import _ from 'lodash'
 
 // актеры, композиторы, художники, режиссеры, монтажеры, операторы, продюсеры, актеры дубляжа, редакторы
 
@@ -20,60 +19,62 @@ const SingleMoviePage = () => {
     const params = useParams()
     const [movie, setMovie] = useState([])
     const [visibleMans, setVisibleMans] = useState(false)
-    const [visibleFacts, setVisibleFacts] = useState(false)
-    const [color, setColor] = useState([])
 
     const [fetching, isLoading] = useFetching(async () => {
         if (params.id !== 'random')
             setMovie((await gets.getById(params.id)).data)
         else
             setMovie((await gets.getRandom()).data)
-
     })
+
+
+    const allDetails = [
+        { title: 'Год производства', key: 'year', formatter: null },
+        { title: 'Жанры', key: 'genres', formatter: joinObject },
+        { title: 'Страны', key: 'countries', formatter: joinObject },
+        { title: 'Бюджет', key: 'budget', formatter: priceFormatter },
+        { title: 'Сборы в мире', key: 'fees.world', formatter: priceFormatter },
+        { title: 'Сборы в России', key: 'fees.russia', formatter: priceFormatter },
+        { title: 'Длительность серии', key: 'movieLength', formatter: movieLengthInHour },
+    ]
+
+
+    function priceFormatter({ value, currency }){
+        return addingSpacesInMoney(value) + ' ' + currency
+    }
+
+    function movieDetails(){
+
+        const details = []
+
+        allDetails.forEach(detail => {
+            let value = _.get(movie, detail.key)
+            if(!value)
+                return;
+
+            if(detail.formatter)
+                value = detail.formatter(value)
+
+            details.push({
+                title: detail.title,
+                value
+            })
+        })
+
+        return details
+    }
 
     useEffect(() => {
         fetching()
     }, [params.id])
 
-    useEffect(() => {
-        if (isLoading) return
-        const img = document.getElementsByTagName('img')[1]
-
-        // if (assets.complete) {
-        //     console.log(rgbToHex(asd.getColor(assets)))
-        //     // console.log(assets)
-        // }
-
-        // asd.getColor(<assets src={movie.poster.url} crossOrigin={'anonymous'}/>)
-        //     .then(color => { console.log(color) })
-        //     .catch(err => { console.log(err) })
-        const dsa = document.createElement('img')
-        dsa.src = movie.poster.url
-        dsa.crossOrigin = 'anonymous'
-        if (dsa.complete) {
-            setColor([rgbToHex(asd.getPalette(dsa, 2)[0]), rgbToHex(asd.getPalette(dsa, 2)[1])])
-        } else {
-            dsa.addEventListener('load', function() {
-                setColor([rgbToHex(asd.getPalette(dsa, 2)[0]), rgbToHex(asd.getPalette(dsa, 2)[1])])
-            });
-        }
-        console.log(movie)
-    }, [isLoading])
-
-    const asd = new ColorThief
     return (
-        <div className={classes.content} style={{background: `linear-gradient(${color[0]}, ${color[1]})`}}>
+        <div className={classes.content}>
             {isLoading
                 ? <div className={classes.loader}><Loader/></div>
-                : <div>
-                    {/*<div style={{width: 100, height: 100, backgroundColor: color}}>*/}
-                    {/*    <p style={{color: contrastingColor(color)}}>{contrastingColor(color)}</p>*/}
-                    {/*</div>*/}
+                : <>
                     <div className={classes.container}>
-                        {movie.poster
-                            ? <img className={classes.poster} src={movie.poster.url} alt="poster"/>
-                            : <img className={classes.poster} src={undefinedPoster} alt="poster"/>
-                        }
+                        <img className={classes.poster} src={movie.poster?.url ?? undefinedPoster} alt="poster"/>
                         <div className={classes.info}>
                             <div className={localClasses.header}>
                                 <div>
@@ -87,13 +88,7 @@ const SingleMoviePage = () => {
                             </div>
                             <div className={classes.detailedInfo}>
                                 <ul>
-                                    <li><span>Год производства: </span>{movie.year}</li>
-                                    <li><span>Жанры: </span>{joinObject(movie.genres)}</li>
-                                    <li><span>Страны: </span>{joinObject(movie.countries)}</li>
-                                    {Object.values(movie.budget ?? []).length !== 0 && <li><span>Бюджет: </span>{addingSpacesInMoney(movie.budget.value) + movie.budget.currency}</li>}
-                                    {Object.values(movie.fees.world ?? []).length !== 0 && <li><span>Сборы в мире: </span>{addingSpacesInMoney(movie.fees.world.value) + movie.fees.world.currency}</li>}
-                                    {Object.values(movie.fees.russia ?? []).length !== 0 && <li><span>Сборы в России: </span>{addingSpacesInMoney(movie.fees.russia.value) + movie.fees.russia.currency}</li>}
-                                    <li><span>Длительность серии: </span>{movieLengthInHour(movie.movieLength)}</li>
+                                    {movieDetails().map(detail => <li><span>{detail.title}:</span> {detail.value}</li>)}
                                 </ul>
                                 <div className={classes.buttons}>
                                     <Button onClick={() => setVisibleMans(true)}>Люди</Button>
@@ -103,7 +98,7 @@ const SingleMoviePage = () => {
                                     >
                                         <Persons persons={movie.persons}/>
                                     </ModalWindow>
-                                    <ButtonLink href={"https://www.kinopoisk.ru/film/" + movie.id}>На кинопоиск</ButtonLink>
+                                    <Button onClick={() => window.open("https://www.kinopoisk.ru/film/" + movie.id, "_blank")}>На кинопоиск</Button>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +107,7 @@ const SingleMoviePage = () => {
                         <h3>Сюжет</h3>
                         <p>{movie.description}</p>
                     </div>}
-                </div>
+                </>
             }
         </div>
     );

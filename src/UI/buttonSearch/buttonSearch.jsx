@@ -1,13 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from './buttonSearch.module.scss'
-import search from '../../assets/search.svg'
+import {ReactComponent as SearchIco} from '../../assets/search.svg'
+import MobilePanel from "../mobilePanel/mobilePanel";
+import Search from "../../components/searchAndFilters/search";
 
-const ButtonSearch = ({className, onClick}) => {
+const MobileSearch = ({className}) => {
+    const [visible, setVisible] = useState(false)
+
     return (
-        <button onClick={onClick} className={[classes.button, className].join(' ')}>
-            <img src={search} alt="search"/>
-        </button>
+        <div>
+            <button onClick={() => setVisible(true)} className={[classes.button, className].join(' ')}>
+                <SearchIco/>
+            </button>
+            <MobilePanel visible={visible} setVisible={setVisible} isHorizontal={true}>
+                <Search
+                    className={classes.filtersMenu}
+                    setVisible={setVisible}
+                />
+                <br/>
+            </MobilePanel>
+        </div>
     );
 };
 
-export default ButtonSearch;
+export default MobileSearch;

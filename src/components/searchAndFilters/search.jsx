@@ -3,14 +3,13 @@ import classes from './search.module.scss'
 import Heading from "../../UI/heading/heading";
 import Button from "../../UI/button/button";
 import {useDispatch} from "react-redux";
-import {contentType, filter, genre, years} from '../../store/slices/searchSlice'
+import {setContentType, setFilter, setGenre, setYears} from '../../store/slices/searchSlice'
 import {setList, setPage} from '../../store/slices/moviesSlice'
 import MySelect from "../../UI/select/select";
-import {useLocation, useNavigate, useNavigation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 
 const Search = ({className, setVisible}) => {
     const [localFilter, setLocalFilter] = useState({value: 'votes.kp', label: 'Сортировка'})
-    const [localContentType, setLocalContentType] = useState({value: 'movie', label: 'Тип'})
     const [localYear, setLocalYear] = useState({value: '1860-2030', label: 'Годы'})
     const [localGenre, setLocalGenre] = useState({value: '', label: 'Жанры'})
 
@@ -19,34 +18,23 @@ const Search = ({className, setVisible}) => {
     const path = useLocation()
 
     useEffect(() => {
-        dispatch(contentType((path.pathname).split('/').join('')))
-    }, [])
+        dispatch(setContentType((path.pathname).split('/').join('')))
+    }, [path])
 
     function clickBtn() {
         dispatch(setList([]))
         dispatch(setPage(1))
         setVisible(false)
 
-        dispatch(years(localYear.value))
-        dispatch(filter(localFilter.value))
-        dispatch(genre(localGenre.value))
+        dispatch(setYears(localYear.value))
+        dispatch(setFilter(localFilter.value))
+        dispatch(setGenre(localGenre.value))
     }
 
     return (
         <aside style={{marginTop: 10}} className={[classes.container, className].join(' ')}>
             <Heading>Поиск</Heading>
             <div className={classes.search_and_filters}>
-                {/*<MySelect*/}
-                {/*    placeholder={'Тип'}*/}
-                {/*    options={[*/}
-                {/*        {value: 'movie', label: 'Фильмы'},*/}
-                {/*        {value: 'cartoon', label: 'Мультфильмы'},*/}
-                {/*        {value: 'anime', label: 'Аниме'},*/}
-                {/*    ]}*/}
-                {/*    selectedOption={localContentType}*/}
-                {/*    setSelectedOption={setLocalContentType}*/}
-                {/*/>*/}
-                {/*<hr/>*/}
                 <MySelect
                     placeholder={'Сортировка'}
                     options={[

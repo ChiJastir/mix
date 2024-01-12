@@ -26,10 +26,10 @@ const links = [
 
 ]
 
-const Navigation = ({className, children}, props) => {
+const Navigation = ({className, children, onClick}, props) => {
     return (
         <aside className={classes.aside}>
-            <ul className={[classes.list, className].join(' ')} {...props}>
+            <ul className={[classes.list, className].join(' ')} onClick={onClick} {...props}>
                 {links.map(link => <li key={link.path}><NavLink to={link.path} className={({ isActive }) => (isActive ? [classes.linkActive, classes.listItem].join(' ') : classes.listItem)}>{link.name}</NavLink></li>)}
             </ul>
             <div className={classes.children}>

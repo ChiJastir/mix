@@ -1,20 +1,19 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import Heading from "../../UI/heading/heading";
 import Card from "../../components/card/card";
 import Loader from "../../UI/loader/loader";
 import gets from "../../API/gets";
 import {useFetching} from "../../hooks/useFething";
-import classes from './moviesPage.module.scss'
+import classes from './cinemasPage.module.scss'
 import Search from "../../components/searchAndFilters/search";
-import MobilePanel from "../../UI/mobilePanel/mobilePanel";
 import {useResize} from "../../hooks/useResize";
-import ButtonSearch from "../../UI/buttonSearch/buttonSearch";
+import MobileSearch from "../../UI/buttonSearch/buttonSearch";
 import useOnScreen from "../../hooks/useOnScreen";
 import Navigation from "../../components/navigation/navigation";
 import {useDispatch, useSelector} from "react-redux";
 import {setList, setPage} from "../../store/slices/moviesSlice";
 
-const MoviesPage = () => {
+const CinemasPage = () => {
     const {
         moviesList,
         page
@@ -30,8 +29,6 @@ const MoviesPage = () => {
 
     const dispatch = useDispatch()
 
-    const [visible, setVisible] = useState(false)
-
     const width = useResize()
     const lastElem = useRef()
 
@@ -44,7 +41,7 @@ const MoviesPage = () => {
         }
     }
 
-    const [fetching, isLoading] = useFetching(loadMovies)
+    const [fetching] = useFetching(loadMovies)
 
     const isVisible = useOnScreen(lastElem)
 
@@ -60,21 +57,12 @@ const MoviesPage = () => {
 
     return (
         <div className={classes.template}>
-            {width <= 850 && <ButtonSearch onClick={() => setVisible(true)}>Показать</ButtonSearch>}
-            {width <= 850 && <MobilePanel visible={visible} setVisible={setVisible} isHorizontal={true}>
-                <Search
-                    setMovies
-                    setGenre
-                    setVisible
-                />
-                <br/>
-            </MobilePanel>}
-            {width > 850 && <Navigation>
-                <Search
-                    setPage={setPage}
-                    setVisible={setVisible}
-                />
-            </Navigation>}
+            {width > 850
+                ? <Navigation onClick={() => dispatch(setList([]))}>
+                    <Search/>
+                </Navigation>
+                : <MobileSearch>Показать</MobileSearch>
+            }
             <div className={classes.content}>
                 <Heading>Каталог</Heading>
                 {moviesList.map(item => <Card key={item.id} data={item}/>)}
@@ -84,4 +72,4 @@ const MoviesPage = () => {
     )
 }
 
-export default MoviesPage;
+export default CinemasPage;
