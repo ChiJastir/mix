@@ -11,6 +11,12 @@ import ModalWindow from "../../UI/modalWindow/modalWindow";
 import Facts from "../../components/facts/facts";
 import PersonMovies from "../../components/entities/persons/movies/personMovies";
 import ButtonLink from "../../UI/buttonLink/buttonLink";
+import Navigation from "../../components/navigation/navigation";
+import {setList} from "../../store/slices/moviesSlice";
+import Search from "../../components/searchAndFilters/search";
+import MobileSearch from "../../UI/buttonSearch/buttonSearch";
+import {useDispatch} from "react-redux";
+import {useResize} from "../../hooks/useResize";
 
 const PersonPage = () => {
     const params = useParams()
@@ -70,7 +76,7 @@ const PersonPage = () => {
                                             <Facts facts={person.facts}/>
                                         </ModalWindow>
                                     </div>}
-                                    <ButtonLink href={"https://www.kinopoisk.ru/name/" + person.id}>На кинопоиск</ButtonLink>
+                                    <Button onClick={() => window.open("https://www.kinopoisk.ru/name/" + person.id)}>На кинопоиск</Button>
                                 </div>
                             </div>
                         </div>

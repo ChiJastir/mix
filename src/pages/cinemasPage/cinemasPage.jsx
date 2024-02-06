@@ -57,12 +57,12 @@ const CinemasPage = () => {
 
     return (
         <div className={classes.template}>
-            {width > 850
-                ? <Navigation onClick={() => dispatch(setList([]))}>
-                    <Search/>
-                </Navigation>
-                : <MobileSearch>Показать</MobileSearch>
-            }
+            {/*{width > 850*/}
+            {/*    ? <Navigation onClick={() => dispatch(setList([]))}>*/}
+            {/*        <Search/>*/}
+            {/*    </Navigation>*/}
+            {/*    : <MobileSearch>Показать</MobileSearch>*/}
+            {/*}*/}
             <div className={classes.content}>
                 <Heading>Каталог</Heading>
                 {moviesList.map(item => <Card key={item.id} data={item}/>)}

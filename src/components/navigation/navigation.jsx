@@ -3,10 +3,10 @@ import classes from "./navigation.module.scss";
 import {NavLink} from "react-router-dom";
 
 const links = [
-    {
-        path: '/',
-        name: 'Главная'
-    },
+    // {
+    //     path: '/',
+    //     name: 'Главная'
+    // },
     {
         path: '/movie',
         name: 'Фильмы'
@@ -20,7 +20,7 @@ const links = [
         name: 'Аниме'
     },
     {
-        path: '/movie/random',
+        path: '/random',
         name: 'Случайный фильм'
     },
 

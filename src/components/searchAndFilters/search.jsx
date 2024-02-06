@@ -24,7 +24,11 @@ const Search = ({className, setVisible}) => {
     function clickBtn() {
         dispatch(setList([]))
         dispatch(setPage(1))
-        setVisible(false)
+        try {
+            setVisible(false)
+        } catch (e) {
+
+        }
 
         dispatch(setYears(localYear.value))
         dispatch(setFilter(localFilter.value))

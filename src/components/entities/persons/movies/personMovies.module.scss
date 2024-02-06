@@ -5,12 +5,14 @@
     padding: 8px 0;
 
     & + &{
-        border-top: 1px #8841ff solid;
+        border-top: 1px var(--gray-text) solid;
     }
 
     h4{
         font-size: 18px;
         margin: 0;
+
+        color: var(--dark-main-color);
     }
 }
 
@@ -23,9 +25,16 @@
 .star{
     height: 21px;
     width: 21px;
+    g{
+        path{
+            fill: var(--main-color);
+        }
+    }
 }
 
 .rating{
     margin: 0;
     font-size: 18px;
+
+    color: black;
 }

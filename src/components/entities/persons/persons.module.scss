@@ -1,15 +1,19 @@
 .persons{
+    ul{
+        padding: 0;
+    }
+
     span{
-        color: #8841ff;
+        color: var(--main-color);
         text-transform: capitalize;
     }
 
     a{
         text-decoration: none;
         color: black;
-    }
 
-    &:hover{
-        color: #8841ff;
+        &:hover{
+            text-decoration: underline var(--main-color);
+        }
     }
 }

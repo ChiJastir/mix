@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {useLocation, useNavigate, useNavigation, useParams} from "react-router-dom";
 import {useFetching} from "../../hooks/useFething";
 import gets from "../../API/gets";
 import Single from "../../components/entities/movies/single";
@@ -11,8 +11,10 @@ const SingleMoviePage = () => {
     const params = useParams()
     const [movie, setMovie] = useState([])
 
+    const path = useLocation()
+
     const [fetching, isLoading] = useFetching(async () => {
-        if (params.id !== 'random')
+        if ((path.pathname).split('/')[1] !== 'random')
             setMovie((await gets.getById(params.id)).data)
         else
             setMovie((await gets.getRandom()).data)
@@ -21,7 +23,7 @@ const SingleMoviePage = () => {
 
     useEffect(() => {
         fetching()
-    }, [params.id])
+    }, [params.id, path])
 
     return (
         <Single movie={movie} loading={isLoading}/>
